@@ -1,0 +1,50 @@
+EM-SuccinctIrreducible - external memory LCP array construction algorithm
+=========================================================================
+
+
+Description
+-----------
+
+This package contains implementation of the external memory LCP array
+construction algorithm called EM-SuccinctIrreducible. The algorithm is
+described in the paper
+
+  Juha Karkkainen and Dominik Kempa,
+  Faster External Memory LCP Array Construction.
+  In Proc. 24th European Symposium on Algorithms (ESA), 2016.
+
+The latest version of EM-SuccinctIrreducible is available at:
+  http://www.cs.helsinki.fi/group/pads/
+
+
+
+Compilation and usage
+---------------------
+
+2. Compile EM-SuccinctIrreducible using the provided Makefile
+
+   $ cd src
+   $ make
+
+This will produce six executables that allow computing the (P)LCP array
+of a given file sequentially and in parallel. For usage, run the
+programs without any arguments. EM-SuccinctIrreducible relies on the
+prior computation of suffix array and BWT for the input text. The
+suffix array for big files can be computed e.g. using the pSAscan
+algorithm, see https://www.cs.helsinki.fi/group/pads/pSAscan.html for
+more details.
+
+
+
+Terms of use
+------------
+
+EM-SuccinctIrreducible is released under the MIT/X11 license. See the
+file LICENCE for more details.
+
+If you use this code, please cite the paper mentioned above and publish
+the URL from which you downloaded the code.
+
+
+
+Helsinki, Aug 2016.

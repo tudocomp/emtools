@@ -1,0 +1,827 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = g++$/;"	m	language:Make
+CFLAGS	Makefile	/^CFLAGS = -Wall -Wextra -pedantic -Wshadow -funroll-loops -pthread -std=c++0x -DNDEBUG -O3 -march=native -I$(INC_DIR) -L$(LIB_DIR)$/;"	m	language:Make
+INC_DIR	Makefile	/^INC_DIR = \/home\/niki\/opt\/include$/;"	m	language:Make
+LIB_DIR	Makefile	/^LIB_DIR = \/home\/niki\/opt\/lib                                                                                                                                   $/;"	m	language:Make
+MergeSchedule	psascan_src/inmem_psascan_src/merge_schedule.h	/^  MergeSchedule(int no_of_blocks, float right_left_ratio,$/;"	f	language:C++	class:psascan_private::inmem_psascan_private::MergeSchedule
+MergeSchedule	psascan_src/inmem_psascan_src/merge_schedule.h	/^class MergeSchedule {$/;"	c	language:C++	namespace:psascan_private::inmem_psascan_private
+SHELL	Makefile	/^SHELL = \/bin\/sh$/;"	m	language:Make
+STATE_INIT	psascan_src/distributed_file.h	/^  enum { STATE_INIT,    \/\/ right after creating (before init_writing)$/;"	e	language:C++	enum:psascan_private::distributed_file::__anon1
+STATE_READ	psascan_src/distributed_file.h	/^         STATE_READ     \/\/ after finish_reading, waiting for death$/;"	e	language:C++	enum:psascan_private::distributed_file::__anon1
+STATE_READING	psascan_src/distributed_file.h	/^         STATE_READING, \/\/ after initialize_reading, reading possible$/;"	e	language:C++	enum:psascan_private::distributed_file::__anon1
+STATE_WRITING	psascan_src/distributed_file.h	/^         STATE_WRITING, \/\/ after initialize_writing, writing possible$/;"	e	language:C++	enum:psascan_private::distributed_file::__anon1
+STATE_WRITTEN	psascan_src/distributed_file.h	/^         STATE_WRITTEN, \/\/ after finish_writing, waiting for initialize_reading$/;"	e	language:C++	enum:psascan_private::distributed_file::__anon1
+STR	psascan_src/utils.h	49;"	d	language:C++
+STRX	psascan_src/utils.h	48;"	d	language:C++
+__PSASCAN_SRC_APPROX_RANK_H_INCLUDED	psascan_src/approx_rank.h	46;"	d	language:C++
+__PSASCAN_SRC_ASYNC_BACKWARD_SKIP_STREAM_READER_H_INCLUDED	psascan_src/async_backward_skip_stream_reader.h	37;"	d	language:C++
+__PSASCAN_SRC_ASYNC_BIT_STREAM_WRITER_H_INCLUDED	psascan_src/async_bit_stream_writer.h	37;"	d	language:C++
+__PSASCAN_SRC_ASYNC_MULTIFILE_BIT_STREAM_READER_H_INCLUDED	psascan_src/async_multifile_bit_stream_reader.h	37;"	d	language:C++
+__PSASCAN_SRC_ASYNC_STREAM_WRITER_H_INCLUDED	psascan_src/async_stream_writer.h	37;"	d	language:C++
+__PSASCAN_SRC_ASYNC_VBYTE_STREAM_READER_H_INCLUDED	psascan_src/async_vbyte_stream_reader.h	37;"	d	language:C++
+__PSASCAN_SRC_BACKGROUND_BLOCK_READER_H_INCLUDED	psascan_src/background_block_reader.h	37;"	d	language:C++
+__PSASCAN_SRC_BACKGROUND_CHUNK_READER_H_INCLUDED	psascan_src/background_chunk_reader.h	37;"	d	language:C++
+__PSASCAN_SRC_BITVECTOR_H_INCLUDED	psascan_src/bitvector.h	37;"	d	language:C++
+__PSASCAN_SRC_BWT_MERGE_H_INCLUDED	psascan_src/bwt_merge.h	37;"	d	language:C++
+__PSASCAN_SRC_COMPUTE_GAP_H_INCLUDED	psascan_src/compute_gap.h	37;"	d	language:C++
+__PSASCAN_SRC_COMPUTE_LEFT_GAP_H_INCLUDED	psascan_src/compute_left_gap.h	37;"	d	language:C++
+__PSASCAN_SRC_COMPUTE_RIGHT_GAP_H_INCLUDED	psascan_src/compute_right_gap.h	37;"	d	language:C++
+__PSASCAN_SRC_DISTRIBUTED_FILE_H_INCLUDED	psascan_src/distributed_file.h	37;"	d	language:C++
+__PSASCAN_SRC_EM_COMPUTE_INITIAL_RANKS_INCLUDED	psascan_src/em_compute_initial_ranks.h	38;"	d	language:C++
+__PSASCAN_SRC_GAP_ARRAY_H_INCLUDED	psascan_src/gap_array.h	37;"	d	language:C++
+__PSASCAN_SRC_GAP_BUFFER_H_INCLUDED	psascan_src/gap_buffer.h	37;"	d	language:C++
+__PSASCAN_SRC_HALF_BLOCK_INFO_H_INCLUDED	psascan_src/half_block_info.h	37;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_BWTSA_H_INCLUDED	psascan_src/inmem_psascan_src/bwtsa.h	37;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_CHANGE_GT_REFERENCE_POINT_H_INCLUDED	psascan_src/inmem_psascan_src/change_gt_reference_point.h	47;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_COMPUTE_INITIAL_GT_BITVECTORS_H_INCLUDED	psascan_src/inmem_psascan_src/compute_initial_gt_bitvectors.h	46;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_DIVSUFSORT_TEMPLATE_H_INCLUDED	psascan_src/inmem_psascan_src/divsufsort_template.h	37;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_INITIAL_PARTIAL_SUFSORT_H_INCLUDED	psascan_src/inmem_psascan_src/initial_partial_sufsort.h	37;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_INMEM_BWTSA_MERGE_H_INCLUDED	psascan_src/inmem_psascan_src/inmem_bwtsa_merge.h	37;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_INMEM_BWT_FROM_SA_H_INCLUDED	psascan_src/inmem_psascan_src/inmem_bwt_from_sa.h	37;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_INMEM_COMPUTE_GAP_H_INCLUDED	psascan_src/inmem_psascan_src/inmem_compute_gap.h	37;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_INMEM_COMPUTE_INITIAL_RANKS_H_INCLUDED	psascan_src/inmem_psascan_src/inmem_compute_initial_ranks.h	38;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_INMEM_PSASCAN_H_INCLUDED	psascan_src/inmem_psascan_src/inmem_psascan.h	37;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_INMEM_SASCAN_INMEM_GAP_ARRAY_H_INCLUDED	psascan_src/inmem_psascan_src/inmem_gap_array.h	37;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_INMEM_STREAM_H_INCLUDED	psascan_src/inmem_psascan_src/inmem_stream.h	37;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_INMEM_UPDATE_H_INCLUDED	psascan_src/inmem_psascan_src/inmem_update.h	37;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_MERGE_SCHEDULE_H_INCLUDED	psascan_src/inmem_psascan_src/merge_schedule.h	37;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_PAGEARRAY_H_INCLUDED	psascan_src/inmem_psascan_src/pagearray.h	46;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_PARALLEL_COPY_H_INCLUDED	psascan_src/inmem_psascan_src/parallel_copy.h	37;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_PARALLEL_EXPAND_H_INCLUDED	psascan_src/inmem_psascan_src/parallel_expand.h	37;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_PARALLEL_MERGE_H_INCLUDED	psascan_src/inmem_psascan_src/parallel_merge.h	46;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_PARALLEL_SHRINK_H_INCLUDED	psascan_src/inmem_psascan_src/parallel_shrink.h	37;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_RANK_H_INCLUDED	psascan_src/inmem_psascan_src/rank.h	66;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_SPARSE_ISA_H_INCLUDED	psascan_src/inmem_psascan_src/sparse_isa.h	46;"	d	language:C++
+__PSASCAN_SRC_INMEM_PSASCAN_SRC_SRANK_AUX_H_INCLUDED	psascan_src/inmem_psascan_src/srank_aux.h	37;"	d	language:C++
+__PSASCAN_SRC_MERGE_H_INCLUDED	psascan_src/merge.h	37;"	d	language:C++
+__PSASCAN_SRC_MULTIFILE_BIT_STREAM_READER_H_INCLUDED	psascan_src/multifile_bit_stream_reader.h	37;"	d	language:C++
+__PSASCAN_SRC_MULTIFILE_H_INCLUDED	psascan_src/multifile.h	37;"	d	language:C++
+__PSASCAN_SRC_PARALLEL_UTILS_H_INCLUDED	psascan_src/parallel_utils.h	37;"	d	language:C++
+__PSASCAN_SRC_PARTIAL_SUFSORT_H_INCLUDED	psascan_src/partial_sufsort.h	37;"	d	language:C++
+__PSASCAN_SRC_PSASCAN_H_INCLUDED	psascan_src/psascan.h	37;"	d	language:C++
+__PSASCAN_SRC_PSASCAN_UTILS_H_INCLUDED	psascan_src/utils.h	37;"	d	language:C++
+__PSASCAN_SRC_RANKSEL_SUPPORT_H_INCLUDED	psascan_src/ranksel_support.h	37;"	d	language:C++
+__PSASCAN_SRC_RANK_H_INCLUDED	psascan_src/rank.h	66;"	d	language:C++
+__PSASCAN_SRC_SPARSE_ISA_H_INCLUDED	psascan_src/sparse_isa.h	46;"	d	language:C++
+__PSASCAN_SRC_STREAM_H_INCLUDED	psascan_src/stream.h	37;"	d	language:C++
+__PSASCAN_SRC_STREAM_INFO_H_INCLUDED	psascan_src/stream_info.h	37;"	d	language:C++
+__PSASCAN_SRC_UPDATE_H_INCLUDED	psascan_src/update.h	37;"	d	language:C++
+__UINT40_H_INCLUDED	psascan_src/uint40.h	33;"	d	language:C++
+absolute_path	psascan_src/utils.cpp	/^std::string absolute_path(std::string fname) {$/;"	f	language:C++	namespace:psascan_private::utils
+absolute_path	psascan_src/utils.h	/^std::string absolute_path(std::string fname);$/;"	p	language:C++	namespace:psascan_private::utils
+access	psascan_src/multifile_bit_stream_reader.h	/^  bool access(long i) {$/;"	f	language:C++	struct:psascan_private::multifile_bit_stream_reader
+add	psascan_src/gap_buffer.h	/^  void add(gap_buffer_type *b) {$/;"	f	language:C++	struct:psascan_private::gap_buffer_poll
+add_excess	psascan_src/gap_array.h	/^  void add_excess(long x) {$/;"	f	language:C++	struct:psascan_private::buffered_gap_array
+add_file	psascan_src/multifile.h	/^  void add_file(long beg, long end, std::string filename) {$/;"	f	language:C++	struct:psascan_private::multifile
+add_objects_to_file	psascan_src/utils.h	/^void add_objects_to_file(const value_type *tab, long length, std::FILE *f) {$/;"	f	language:C++	namespace:psascan_private::utils
+add_objects_to_file	psascan_src/utils.h	/^void add_objects_to_file(const value_type *tab, long length, std::string fname) {$/;"	f	language:C++	namespace:psascan_private::utils
+answer_queries	psascan_src/inmem_psascan_src/inmem_gap_array.h	/^  long answer_queries(long n_queries, const long *a, long *b, long *c,$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::inmem_gap_array
+answer_single_gap_query	psascan_src/inmem_psascan_src/inmem_gap_array.h	/^  static void answer_single_gap_query(const inmem_gap_array *gap, long block_size,$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::inmem_gap_array
+apply_excess_aux	psascan_src/gap_array.h	/^  static void apply_excess_aux(gap_array_2n *gap, const long *tab,$/;"	f	language:C++	struct:psascan_private::gap_array_2n
+apply_excess_from_disk	psascan_src/gap_array.h	/^  void apply_excess_from_disk(long ram_budget, long max_threads) {$/;"	f	language:C++	struct:psascan_private::gap_array_2n
+approx_rank	psascan_src/approx_rank.h	/^    approx_rank(const unsigned char *text, long length, long max_threads) {$/;"	f	language:C++	class:psascan_private::approx_rank
+approx_rank	psascan_src/approx_rank.h	/^class approx_rank {$/;"	c	language:C++	namespace:psascan_private
+async_backward_skip_stream_reader	psascan_src/async_backward_skip_stream_reader.h	/^  async_backward_skip_stream_reader(std::string filename, long skip_elems, long bufsize = (4 << 20)) {$/;"	f	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+async_backward_skip_stream_reader	psascan_src/async_backward_skip_stream_reader.h	/^struct async_backward_skip_stream_reader {$/;"	s	language:C++	namespace:psascan_private
+async_bit_stream_writer	psascan_src/async_bit_stream_writer.h	/^  async_bit_stream_writer(std::string filename, long bufsize = (4 << 20)) {$/;"	f	language:C++	struct:psascan_private::async_bit_stream_writer
+async_bit_stream_writer	psascan_src/async_bit_stream_writer.h	/^struct async_bit_stream_writer {$/;"	s	language:C++	namespace:psascan_private
+async_io_code	psascan_src/async_multifile_bit_stream_reader.h	/^  static void async_io_code(async_multifile_bit_stream_reader *file) {$/;"	f	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+async_io_code	psascan_src/background_chunk_reader.h	/^    static void async_io_code(background_chunk_reader &r) {$/;"	f	language:C++	struct:psascan_private::background_chunk_reader
+async_io_code	psascan_src/distributed_file.h	/^  static void async_io_code(distributed_file<T> *file) {$/;"	f	language:C++	struct:psascan_private::distributed_file
+async_multifile_bit_stream_reader	psascan_src/async_multifile_bit_stream_reader.h	/^  async_multifile_bit_stream_reader(const multifile *m, long start_pos = 0L,$/;"	f	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+async_multifile_bit_stream_reader	psascan_src/async_multifile_bit_stream_reader.h	/^struct async_multifile_bit_stream_reader {$/;"	s	language:C++	namespace:psascan_private
+async_stream_writer	psascan_src/async_stream_writer.h	/^  async_stream_writer(std::string filename, long bufsize = (4 << 20)) {$/;"	f	language:C++	struct:psascan_private::async_stream_writer
+async_stream_writer	psascan_src/async_stream_writer.h	/^struct async_stream_writer {$/;"	s	language:C++	namespace:psascan_private
+async_vbyte_stream_reader	psascan_src/async_vbyte_stream_reader.h	/^  async_vbyte_stream_reader(std::string filename, long bufsize = (4L << 20)) {$/;"	f	language:C++	struct:psascan_private::async_vbyte_stream_reader
+async_vbyte_stream_reader	psascan_src/async_vbyte_stream_reader.h	/^struct async_vbyte_stream_reader {$/;"	s	language:C++	namespace:psascan_private
+available	psascan_src/gap_buffer.h	/^  bool available() const {$/;"	f	language:C++	struct:psascan_private::gap_buffer_poll
+background_block_reader	psascan_src/background_block_reader.h	/^    background_block_reader(std::string filename, long start, long size) {$/;"	f	language:C++	struct:psascan_private::background_block_reader
+background_block_reader	psascan_src/background_block_reader.h	/^struct background_block_reader {$/;"	s	language:C++	namespace:psascan_private
+background_chunk_reader	psascan_src/background_chunk_reader.h	/^    background_chunk_reader(std::string filename, long beg,$/;"	f	language:C++	struct:psascan_private::background_chunk_reader
+background_chunk_reader	psascan_src/background_chunk_reader.h	/^struct background_chunk_reader {$/;"	s	language:C++	namespace:psascan_private
+beg	psascan_src/half_block_info.h	/^  long beg;$/;"	m	language:C++	struct:psascan_private::half_block_info
+bitvector	psascan_src/bitvector.h	/^    bitvector(long length) {$/;"	f	language:C++	struct:psascan_private::bitvector
+bitvector	psascan_src/bitvector.h	/^    bitvector(std::string filename) {$/;"	f	language:C++	struct:psascan_private::bitvector
+bitvector	psascan_src/bitvector.h	/^struct bitvector {$/;"	s	language:C++	namespace:psascan_private
+buffered_gap_array	psascan_src/gap_array.h	/^  buffered_gap_array(long length, std::string storage_fname = std::string("")) {$/;"	f	language:C++	struct:psascan_private::buffered_gap_array
+buffered_gap_array	psascan_src/gap_array.h	/^struct buffered_gap_array {$/;"	s	language:C++	namespace:psascan_private
+bwt	psascan_src/inmem_psascan_src/bwtsa.h	/^  unsigned char bwt;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::bwtsa_t
+bwtsa_t	psascan_src/inmem_psascan_src/bwtsa.h	/^  bwtsa_t() {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::bwtsa_t
+bwtsa_t	psascan_src/inmem_psascan_src/bwtsa.h	/^  bwtsa_t(int x) {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::bwtsa_t
+bwtsa_t	psascan_src/inmem_psascan_src/bwtsa.h	/^  bwtsa_t(long x) {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::bwtsa_t
+bwtsa_t	psascan_src/inmem_psascan_src/bwtsa.h	/^  bwtsa_t(uint40 x) {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::bwtsa_t
+bwtsa_t	psascan_src/inmem_psascan_src/bwtsa.h	/^struct bwtsa_t {$/;"	s	language:C++	namespace:psascan_private::inmem_psascan_private
+close_and_destroy_cur_file	psascan_src/distributed_file.h	/^  void close_and_destroy_cur_file() {$/;"	f	language:C++	struct:psascan_private::distributed_file
+compute_block_rank_matrix	psascan_src/inmem_psascan_src/inmem_compute_initial_ranks.h	/^void compute_block_rank_matrix(const unsigned char *text, long text_length, $/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+compute_bwt_in_bwtsa	psascan_src/inmem_psascan_src/inmem_bwt_from_sa.h	/^void compute_bwt_in_bwtsa(const unsigned char *text, long length,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+compute_bwt_in_bwtsa_aux	psascan_src/inmem_psascan_src/inmem_bwt_from_sa.h	/^void compute_bwt_in_bwtsa_aux(const unsigned char *text, long beg,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+compute_final_gt	psascan_src/inmem_psascan_src/compute_initial_gt_bitvectors.h	/^void compute_final_gt(long text_length, long max_block_size, long mb_beg,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+compute_final_gt_last_bits	psascan_src/inmem_psascan_src/compute_initial_gt_bitvectors.h	/^void compute_final_gt_last_bits(long text_length, long max_block_size,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+compute_gap	psascan_src/compute_gap.h	/^void compute_gap(const rank4n<> *rank, buffered_gap_array *gap,$/;"	f	language:C++	namespace:psascan_private
+compute_gapsum_for_chunk_group	psascan_src/gap_array.h	/^  static void compute_gapsum_for_chunk_group(long group_beg, long group_end, long max_chunk_size,$/;"	f	language:C++	struct:psascan_private::buffered_gap_array
+compute_initial_gt_bitvectors	psascan_src/inmem_psascan_src/compute_initial_gt_bitvectors.h	/^void compute_initial_gt_bitvectors(const unsigned char *text, long text_length,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+compute_initial_rank	psascan_src/bwt_merge.h	/^void compute_initial_rank(long i, const ranksel_support *ranksel, long &result) {$/;"	f	language:C++	namespace:psascan_private
+compute_j_aux	psascan_src/gap_array.h	/^  static void compute_j_aux(long range_beg, long n_chunks, long max_chunk_size,$/;"	f	language:C++	struct:psascan_private::buffered_gap_array
+compute_left_gap	psascan_src/compute_left_gap.h	/^void compute_left_gap(long left_block_size, long right_block_size,$/;"	f	language:C++	namespace:psascan_private
+compute_occ_list_aux	psascan_src/approx_rank.h	/^    static void compute_occ_list_aux(const unsigned char *text, long beg,$/;"	f	language:C++	class:psascan_private::approx_rank
+compute_partial_gt_end	psascan_src/inmem_psascan_src/compute_initial_gt_bitvectors.h	/^void compute_partial_gt_end(const unsigned char *text, long text_length,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+compute_range	psascan_src/inmem_psascan_src/inmem_compute_initial_ranks.h	/^void compute_range(const unsigned char *text, long block_beg, long block_size,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+compute_ranges_1	psascan_src/inmem_psascan_src/inmem_compute_initial_ranks.h	/^void compute_ranges_1(const unsigned char *text, long text_length,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+compute_ranges_2	psascan_src/inmem_psascan_src/inmem_compute_initial_ranks.h	/^void compute_ranges_2(const unsigned char *text, long text_length,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+compute_ranges_3	psascan_src/inmem_psascan_src/inmem_compute_initial_ranks.h	/^void compute_ranges_3(const unsigned char *text, long text_length,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+compute_right_gap	psascan_src/compute_right_gap.h	/^void compute_right_gap(long left_block_size, long right_block_size,$/;"	f	language:C++	namespace:psascan_private
+compute_size_of_vbyte_slab	psascan_src/parallel_utils.h	/^void compute_size_of_vbyte_slab(const long *tab, long length, long &result) {$/;"	f	language:C++	namespace:psascan_private::parallel_utils
+compute_sparse_isa_aux	psascan_src/inmem_psascan_src/sparse_isa.h	/^  static void compute_sparse_isa_aux(const pagearray_type &bwtsa, long block_beg,$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::sparse_isa
+compute_sparse_isa_aux	psascan_src/sparse_isa.h	/^    static void compute_sparse_isa_aux(const T *psa, long block_beg,$/;"	f	language:C++	struct:psascan_private::sparse_isa
+compute_sum2	psascan_src/inmem_psascan_src/inmem_gap_array.h	/^  static void compute_sum2(const inmem_gap_array *gap, long range_beg,$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::inmem_gap_array
+compute_sum3	psascan_src/inmem_psascan_src/inmem_gap_array.h	/^  static long compute_sum3(const inmem_gap_array *gap, long j,$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::inmem_gap_array
+compute_symbol_count_aux	psascan_src/approx_rank.h	/^    static void compute_symbol_count_aux(const unsigned char *text, long beg,$/;"	f	language:C++	class:psascan_private::approx_rank
+convert_array_to_vbyte_slab	psascan_src/parallel_utils.h	/^long convert_array_to_vbyte_slab(const long *tab, long length, unsigned char *dest, long max_threads) {$/;"	f	language:C++	namespace:psascan_private::parallel_utils
+convert_gap_to_bitvector_aux	psascan_src/gap_array.h	/^  static void convert_gap_to_bitvector_aux(long beg, long end, long j, long S, buffered_gap_array *gap, bitvector *bv) {$/;"	f	language:C++	struct:psascan_private::buffered_gap_array
+convert_to_bitvector	psascan_src/gap_array.h	/^  bitvector* convert_to_bitvector(long max_threads) {$/;"	f	language:C++	struct:psascan_private::buffered_gap_array
+cost	psascan_src/inmem_psascan_src/merge_schedule.h	/^  float cost(int n) const {$/;"	f	language:C++	class:psascan_private::inmem_psascan_private::MergeSchedule
+cur_bit	psascan_src/multifile_bit_stream_reader.h	/^  long cur_bit;$/;"	m	language:C++	struct:psascan_private::multifile_bit_stream_reader
+cur_bit_absolute	psascan_src/multifile_bit_stream_reader.h	/^  long cur_bit_absolute;$/;"	m	language:C++	struct:psascan_private::multifile_bit_stream_reader
+cur_bit_buffer	psascan_src/multifile_bit_stream_reader.h	/^  long cur_bit_buffer;$/;"	m	language:C++	struct:psascan_private::multifile_bit_stream_reader
+cur_byte	psascan_src/multifile_bit_stream_reader.h	/^  long cur_byte;$/;"	m	language:C++	struct:psascan_private::multifile_bit_stream_reader
+distributed_file	psascan_src/distributed_file.h	/^  distributed_file(std::string filename_base, long max_bytes) {$/;"	f	language:C++	struct:psascan_private::distributed_file
+distributed_file	psascan_src/distributed_file.h	/^  distributed_file(std::string filename_base, long max_bytes,$/;"	f	language:C++	struct:psascan_private::distributed_file
+distributed_file	psascan_src/distributed_file.h	/^struct distributed_file {$/;"	s	language:C++	namespace:psascan_private
+em_compute_initial_ranks	psascan_src/em_compute_initial_ranks.h	/^void em_compute_initial_ranks($/;"	f	language:C++	namespace:psascan_private
+em_compute_single_initial_rank	psascan_src/em_compute_initial_ranks.h	/^void em_compute_single_initial_rank($/;"	f	language:C++	namespace:psascan_private
+em_compute_single_initial_rank_2	psascan_src/em_compute_initial_ranks.h	/^void em_compute_single_initial_rank_2($/;"	f	language:C++	namespace:psascan_private
+encode_type_I	psascan_src/inmem_psascan_src/rank.h	/^    void encode_type_I(const pagearray_type *ptext, unsigned char *bwt,$/;"	f	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+encode_type_I	psascan_src/rank.h	/^    void encode_type_I(const unsigned char *text, long max_threads) {$/;"	f	language:C++	class:psascan_private::rank4n
+encode_type_II	psascan_src/inmem_psascan_src/rank.h	/^    void encode_type_II(const unsigned char *bwt, long max_threads) {$/;"	f	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+encode_type_II	psascan_src/rank.h	/^    void encode_type_II(const unsigned char *text, long max_threads) {$/;"	f	language:C++	class:psascan_private::rank4n
+encode_type_II_aux	psascan_src/inmem_psascan_src/rank.h	/^    static void encode_type_II_aux(rank4n &r, unsigned long cblock_range_beg,$/;"	f	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+encode_type_II_aux	psascan_src/rank.h	/^    static void encode_type_II_aux(rank4n &r, const unsigned char *text,$/;"	f	language:C++	class:psascan_private::rank4n
+encode_type_I_aux	psascan_src/inmem_psascan_src/rank.h	/^    static void encode_type_I_aux(rank4n &r, const pagearray_type *ptext,$/;"	f	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+encode_type_I_aux	psascan_src/rank.h	/^    static void encode_type_I_aux(rank4n &r, const unsigned char *text,$/;"	f	language:C++	class:psascan_private::rank4n
+encode_vbyte_slab	psascan_src/parallel_utils.h	/^void encode_vbyte_slab(const long *tab, long length, unsigned char *dest) {$/;"	f	language:C++	namespace:psascan_private::parallel_utils
+end	psascan_src/half_block_info.h	/^  long end;$/;"	m	language:C++	struct:psascan_private::half_block_info
+erase_disk_excess	psascan_src/gap_array.h	/^  void erase_disk_excess() {$/;"	f	language:C++	struct:psascan_private::buffered_gap_array
+erase_disk_excess	psascan_src/gap_array.h	/^  void erase_disk_excess() {$/;"	f	language:C++	struct:psascan_private::gap_array_2n
+file_delete	psascan_src/utils.cpp	/^void file_delete(std::string fname) {$/;"	f	language:C++	namespace:psascan_private::utils
+file_delete	psascan_src/utils.h	/^void file_delete(std::string fname);$/;"	p	language:C++	namespace:psascan_private::utils
+file_exists	main.cpp	/^bool file_exists(std::string fname) {$/;"	f	language:C++
+file_exists	psascan_src/utils.cpp	/^bool file_exists(std::string fname) {$/;"	f	language:C++	namespace:psascan_private::utils
+file_exists	psascan_src/utils.h	/^bool file_exists(std::string fname);$/;"	p	language:C++	namespace:psascan_private::utils
+file_size	psascan_src/utils.cpp	/^long file_size(std::string fname) {$/;"	f	language:C++	namespace:psascan_private::utils
+file_size	psascan_src/utils.h	/^long file_size(std::string fname);$/;"	p	language:C++	namespace:psascan_private::utils
+files_info	psascan_src/multifile.h	/^  std::vector<single_file_info> files_info;$/;"	m	language:C++	struct:psascan_private::multifile
+files_info	psascan_src/multifile_bit_stream_reader.h	/^  std::vector<single_file_info> files_info;$/;"	m	language:C++	struct:psascan_private::multifile_bit_stream_reader
+fill_random_letters	psascan_src/utils.cpp	/^void fill_random_letters(unsigned char* &s, long n, int sigma) {$/;"	f	language:C++	namespace:psascan_private::utils
+fill_random_letters	psascan_src/utils.h	/^void fill_random_letters(unsigned char* &s, long n, int sigma);$/;"	p	language:C++	namespace:psascan_private::utils
+fill_random_string	psascan_src/utils.cpp	/^void fill_random_string(unsigned char* &s, long length, int sigma) {$/;"	f	language:C++	namespace:psascan_private::utils
+fill_random_string	psascan_src/utils.h	/^void fill_random_string(unsigned char* &s, long length, int sigma);$/;"	p	language:C++	namespace:psascan_private::utils
+finish_reading	psascan_src/distributed_file.h	/^  void finish_reading() {$/;"	f	language:C++	struct:psascan_private::distributed_file
+finish_writing	psascan_src/distributed_file.h	/^  void finish_writing() {$/;"	f	language:C++	struct:psascan_private::distributed_file
+finished	psascan_src/gap_buffer.h	/^  bool finished() const {$/;"	f	language:C++	struct:psascan_private::gap_buffer_poll
+flip	psascan_src/bitvector.h	/^    inline void flip(long i) {$/;"	f	language:C++	struct:psascan_private::bitvector
+flush_excess_to_disk	psascan_src/gap_array.h	/^  void flush_excess_to_disk() {$/;"	f	language:C++	struct:psascan_private::buffered_gap_array
+fully_contained_page	psascan_src/inmem_psascan_src/pagearray.h	/^  inline bool fully_contained_page(value_type *p) const {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+gap_array_2n	psascan_src/gap_array.h	/^  gap_array_2n(const buffered_gap_array *gap, long max_threads) {$/;"	f	language:C++	struct:psascan_private::gap_array_2n
+gap_array_2n	psascan_src/gap_array.h	/^  gap_array_2n(long length) {$/;"	f	language:C++	struct:psascan_private::gap_array_2n
+gap_array_2n	psascan_src/gap_array.h	/^struct gap_array_2n {$/;"	s	language:C++	namespace:psascan_private
+gap_buffer	psascan_src/gap_buffer.h	/^  gap_buffer(long size_bytes, long n_increasers)$/;"	f	language:C++	struct:psascan_private::gap_buffer
+gap_buffer	psascan_src/gap_buffer.h	/^struct gap_buffer {  $/;"	s	language:C++	namespace:psascan_private
+gap_buffer_poll	psascan_src/gap_buffer.h	/^  gap_buffer_poll(long worker_threads = 0L) {$/;"	f	language:C++	struct:psascan_private::gap_buffer_poll
+gap_buffer_poll	psascan_src/gap_buffer.h	/^struct gap_buffer_poll {$/;"	s	language:C++	namespace:psascan_private
+gap_buffer_type	psascan_src/gap_buffer.h	/^  typedef gap_buffer<value_type> gap_buffer_type;$/;"	t	language:C++	struct:psascan_private::gap_buffer_poll
+gap_filename	psascan_src/half_block_info.h	/^  std::string gap_filename;$/;"	m	language:C++	struct:psascan_private::half_block_info
+gap_parallel_updater	psascan_src/inmem_psascan_src/inmem_update.h	/^  gap_parallel_updater(inmem_gap_array *gap_array, int threads_cnt)$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::gap_parallel_updater
+gap_parallel_updater	psascan_src/inmem_psascan_src/inmem_update.h	/^struct gap_parallel_updater {$/;"	s	language:C++	namespace:psascan_private::inmem_psascan_private
+gap_parallel_updater	psascan_src/update.h	/^  gap_parallel_updater(buffered_gap_array *gap_array, int threads_cnt)$/;"	f	language:C++	struct:psascan_private::gap_parallel_updater
+gap_parallel_updater	psascan_src/update.h	/^struct gap_parallel_updater {$/;"	s	language:C++	namespace:psascan_private
+gap_updater	psascan_src/update.h	/^void gap_updater(gap_buffer_poll<block_offset_type> *full_gap_buffers,$/;"	f	language:C++	namespace:psascan_private
+get	psascan_src/bitvector.h	/^    inline bool get(long i) const {$/;"	f	language:C++	struct:psascan_private::bitvector
+get	psascan_src/gap_buffer.h	/^  gap_buffer_type *get() {$/;"	f	language:C++	struct:psascan_private::gap_buffer_poll
+get_chunk_size	psascan_src/background_chunk_reader.h	/^    inline long get_chunk_size() const {$/;"	f	language:C++	struct:psascan_private::background_chunk_reader
+get_next	psascan_src/gap_array.h	/^  inline long get_next() {$/;"	f	language:C++	struct:psascan_private::buffered_gap_array
+get_page_addr	psascan_src/inmem_psascan_src/pagearray.h	/^  inline value_type *get_page_addr(long id) const {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+get_page_id	psascan_src/inmem_psascan_src/pagearray.h	/^  inline long get_page_id(long i) const {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+get_page_id	psascan_src/inmem_psascan_src/pagearray.h	/^  inline long get_page_id(value_type *p) const {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+get_page_offset	psascan_src/inmem_psascan_src/pagearray.h	/^  inline long get_page_offset(long i) const {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+gt_end_to_gt_begin	psascan_src/inmem_psascan_src/change_gt_reference_point.h	/^void gt_end_to_gt_begin(const unsigned char *text, long text_length,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+gt_end_to_gt_begin_aux	psascan_src/inmem_psascan_src/change_gt_reference_point.h	/^void gt_end_to_gt_begin_aux(const unsigned char *text, long text_length,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+half_block_info	psascan_src/half_block_info.h	/^struct half_block_info {$/;"	s	language:C++	namespace:psascan_private
+high	psascan_src/uint40.h	/^    uint8_t     high;$/;"	m	language:C++	class:uint40
+increment_finished_workers	psascan_src/gap_buffer.h	/^  void increment_finished_workers() {$/;"	f	language:C++	struct:psascan_private::gap_buffer_poll
+init	psascan_src/async_multifile_bit_stream_reader.h	/^  void init(long start_pos) {$/;"	f	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+initial_partial_sufsort	psascan_src/inmem_psascan_src/initial_partial_sufsort.h	/^void initial_partial_sufsort(unsigned char *, long, bitvector *,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+initial_partial_sufsort	psascan_src/inmem_psascan_src/initial_partial_sufsort.h	/^void initial_partial_sufsort(unsigned char *text, long text_length,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+initialize_reading	psascan_src/distributed_file.h	/^  void initialize_reading(long bufsize = (4 << 20)) {$/;"	f	language:C++	struct:psascan_private::distributed_file
+initialize_sequential_reading	psascan_src/multifile_bit_stream_reader.h	/^  void initialize_sequential_reading(long i) {$/;"	f	language:C++	struct:psascan_private::multifile_bit_stream_reader
+initialize_writing	psascan_src/distributed_file.h	/^  void initialize_writing() {$/;"	f	language:C++	struct:psascan_private::distributed_file
+inmem_bwtsa_merge	psascan_src/inmem_psascan_src/inmem_bwtsa_merge.h	/^pagearray<bwtsa_t<saidx_t>, pagesize_log> *inmem_bwtsa_merge($/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+inmem_compute_gap	psascan_src/inmem_psascan_src/inmem_compute_gap.h	/^void inmem_compute_gap(const unsigned char *text, long text_length, long left_block_beg,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+inmem_gap_array	psascan_src/inmem_psascan_src/inmem_gap_array.h	/^  inmem_gap_array(long length)$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::inmem_gap_array
+inmem_gap_array	psascan_src/inmem_psascan_src/inmem_gap_array.h	/^struct inmem_gap_array {$/;"	s	language:C++	namespace:psascan_private::inmem_psascan_private
+inmem_gap_updater	psascan_src/inmem_psascan_src/inmem_update.h	/^void inmem_gap_updater(gap_buffer_poll<block_offset_type> *full_gap_buffers,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+inmem_parallel_stream	psascan_src/inmem_psascan_src/inmem_stream.h	/^void inmem_parallel_stream($/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+inmem_psascan	psascan_src/inmem_psascan_src/inmem_psascan.h	/^void inmem_psascan($/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/bwtsa.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/change_gt_reference_point.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/compute_initial_gt_bitvectors.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/divsufsort_template.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/initial_partial_sufsort.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/inmem_bwt_from_sa.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/inmem_bwtsa_merge.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/inmem_compute_gap.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/inmem_compute_initial_ranks.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/inmem_gap_array.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/inmem_psascan.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/inmem_stream.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/inmem_update.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/merge_schedule.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/pagearray.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/parallel_copy.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/parallel_expand.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/parallel_merge.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/parallel_shrink.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/rank.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/sparse_isa.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+inmem_psascan_private	psascan_src/inmem_psascan_src/srank_aux.h	/^namespace inmem_psascan_private {$/;"	n	language:C++	namespace:psascan_private
+intToStr	psascan_src/utils.h	/^std::string intToStr(int_type x) {$/;"	f	language:C++	namespace:psascan_private::utils
+io_thread_code	psascan_src/async_backward_skip_stream_reader.h	/^  static void io_thread_code(async_backward_skip_stream_reader<T> *reader) {$/;"	f	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+io_thread_code	psascan_src/async_bit_stream_writer.h	/^  static void io_thread_code(async_bit_stream_writer *writer) {$/;"	f	language:C++	struct:psascan_private::async_bit_stream_writer
+io_thread_code	psascan_src/async_stream_writer.h	/^  static void io_thread_code(async_stream_writer<T> *writer) {$/;"	f	language:C++	struct:psascan_private::async_stream_writer
+io_thread_code	psascan_src/async_vbyte_stream_reader.h	/^  static void io_thread_code(async_vbyte_stream_reader *reader) {$/;"	f	language:C++	struct:psascan_private::async_vbyte_stream_reader
+io_thread_main	psascan_src/background_block_reader.h	/^    static void io_thread_main(background_block_reader &reader) {$/;"	f	language:C++	struct:psascan_private::background_block_reader
+isa_sampling_rate	psascan_src/inmem_psascan_src/sparse_isa.h	/^  static const unsigned isa_sampling_rate = (1U << isa_sampling_rate_log);$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::sparse_isa
+isa_sampling_rate_mask	psascan_src/inmem_psascan_src/sparse_isa.h	/^  static const unsigned isa_sampling_rate_mask = isa_sampling_rate - 1;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::sparse_isa
+k_2cblock_size	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned k_2cblock_size;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_2cblock_size	psascan_src/inmem_psascan_src/rank.h	/^  ::k_2cblock_size = (2 << k_cblock_size_log);$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_2cblock_size	psascan_src/rank.h	/^    static const unsigned k_2cblock_size;$/;"	m	language:C++	class:psascan_private::rank4n
+k_2cblock_size	psascan_src/rank.h	/^  ::k_2cblock_size = (2 << k_cblock_size_log);$/;"	m	language:C++	class:psascan_private::rank4n
+k_2cblock_size_mask	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned k_2cblock_size_mask;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_2cblock_size_mask	psascan_src/inmem_psascan_src/rank.h	/^  ::k_2cblock_size_mask = (2 << k_cblock_size_log) - 1;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_2cblock_size_mask	psascan_src/rank.h	/^    static const unsigned k_2cblock_size_mask;$/;"	m	language:C++	class:psascan_private::rank4n
+k_2cblock_size_mask	psascan_src/rank.h	/^  ::k_2cblock_size_mask = (2 << k_cblock_size_log) - 1;$/;"	m	language:C++	class:psascan_private::rank4n
+k_bufsize	psascan_src/multifile_bit_stream_reader.h	/^  static const long k_bufsize;$/;"	m	language:C++	struct:psascan_private::multifile_bit_stream_reader
+k_bufsize	psascan_src/multifile_bit_stream_reader.h	/^const long multifile_bit_stream_reader::k_bufsize = (1L << 20);$/;"	m	language:C++	class:psascan_private::multifile_bit_stream_reader
+k_cblock_size	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned long k_cblock_size;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_cblock_size	psascan_src/inmem_psascan_src/rank.h	/^  ::k_cblock_size = (1L << k_cblock_size_log);$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_cblock_size	psascan_src/rank.h	/^    static const unsigned long k_cblock_size;$/;"	m	language:C++	class:psascan_private::rank4n
+k_cblock_size	psascan_src/rank.h	/^  ::k_cblock_size = (1L << k_cblock_size_log);$/;"	m	language:C++	class:psascan_private::rank4n
+k_cblock_size_mask	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned long k_cblock_size_mask;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_cblock_size_mask	psascan_src/inmem_psascan_src/rank.h	/^  ::k_cblock_size_mask = (1L << k_cblock_size_log) - 1;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_cblock_size_mask	psascan_src/rank.h	/^    static const unsigned long k_cblock_size_mask;$/;"	m	language:C++	class:psascan_private::rank4n
+k_cblock_size_mask	psascan_src/rank.h	/^  ::k_cblock_size_mask = (1L << k_cblock_size_log) - 1;$/;"	m	language:C++	class:psascan_private::rank4n
+k_cblock_size_mask_neg	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned long k_cblock_size_mask_neg;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_cblock_size_mask_neg	psascan_src/inmem_psascan_src/rank.h	/^  ::k_cblock_size_mask_neg = ~((1L << k_cblock_size_log) - 1);$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_cblock_size_mask_neg	psascan_src/rank.h	/^    static const unsigned long k_cblock_size_mask_neg;$/;"	m	language:C++	class:psascan_private::rank4n
+k_cblock_size_mask_neg	psascan_src/rank.h	/^  ::k_cblock_size_mask_neg = ~((1L << k_cblock_size_log) - 1);$/;"	m	language:C++	class:psascan_private::rank4n
+k_cblocks_in_sblock	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned k_cblocks_in_sblock;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_cblocks_in_sblock	psascan_src/inmem_psascan_src/rank.h	/^  ::k_cblocks_in_sblock = (1 << (k_sblock_size_log - k_cblock_size_log));$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_cblocks_in_sblock	psascan_src/rank.h	/^    static const unsigned k_cblocks_in_sblock;$/;"	m	language:C++	class:psascan_private::rank4n
+k_cblocks_in_sblock	psascan_src/rank.h	/^  ::k_cblocks_in_sblock = (1 << (k_sblock_size_log - k_cblock_size_log));$/;"	m	language:C++	class:psascan_private::rank4n
+k_cblocks_in_sblock_log	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned k_cblocks_in_sblock_log;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_cblocks_in_sblock_log	psascan_src/inmem_psascan_src/rank.h	/^  ::k_cblocks_in_sblock_log = k_sblock_size_log - k_cblock_size_log;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_cblocks_in_sblock_log	psascan_src/rank.h	/^    static const unsigned k_cblocks_in_sblock_log;$/;"	m	language:C++	class:psascan_private::rank4n
+k_cblocks_in_sblock_log	psascan_src/rank.h	/^  ::k_cblocks_in_sblock_log = k_sblock_size_log - k_cblock_size_log;$/;"	m	language:C++	class:psascan_private::rank4n
+k_cblocks_in_sblock_mask	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned k_cblocks_in_sblock_mask;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_cblocks_in_sblock_mask	psascan_src/inmem_psascan_src/rank.h	/^  ::k_cblocks_in_sblock_mask = (1 << (k_sblock_size_log - k_cblock_size_log)) - 1;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_cblocks_in_sblock_mask	psascan_src/rank.h	/^    static const unsigned k_cblocks_in_sblock_mask;$/;"	m	language:C++	class:psascan_private::rank4n
+k_cblocks_in_sblock_mask	psascan_src/rank.h	/^  ::k_cblocks_in_sblock_mask = (1 << (k_sblock_size_log - k_cblock_size_log)) - 1;$/;"	m	language:C++	class:psascan_private::rank4n
+k_char_type_freq	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned k_char_type_freq =    0x01;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_char_type_freq	psascan_src/rank.h	/^    static const unsigned k_char_type_freq =    0x01;$/;"	m	language:C++	class:psascan_private::rank4n
+k_char_type_missing	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned k_char_type_missing = 0x03;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_char_type_missing	psascan_src/rank.h	/^    static const unsigned k_char_type_missing = 0x03;$/;"	m	language:C++	class:psascan_private::rank4n
+k_char_type_rare	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned k_char_type_rare =    0x02;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_char_type_rare	psascan_src/rank.h	/^    static const unsigned k_char_type_rare =    0x02;$/;"	m	language:C++	class:psascan_private::rank4n
+k_chunk_size	psascan_src/background_block_reader.h	/^    static const long k_chunk_size;$/;"	m	language:C++	struct:psascan_private::background_block_reader
+k_chunk_size	psascan_src/background_block_reader.h	/^const long background_block_reader::k_chunk_size = (1L << 20);$/;"	m	language:C++	class:psascan_private::background_block_reader
+k_excess_limit	psascan_src/gap_array.h	/^  static const long k_excess_limit = (1L << 22);$/;"	m	language:C++	struct:psascan_private::buffered_gap_array
+k_sampling_rate	psascan_src/approx_rank.h	/^    static const long k_sampling_rate;$/;"	m	language:C++	class:psascan_private::approx_rank
+k_sampling_rate	psascan_src/approx_rank.h	/^const long approx_rank<k_sampling_rate_log>::k_sampling_rate = (1L << k_sampling_rate_log);$/;"	m	language:C++	class:psascan_private::approx_rank
+k_sampling_rate	psascan_src/sparse_isa.h	/^    static const long k_sampling_rate;$/;"	m	language:C++	struct:psascan_private::sparse_isa
+k_sampling_rate	psascan_src/sparse_isa.h	/^  ::k_sampling_rate = (1L << k_sampling_rate_log);$/;"	m	language:C++	class:psascan_private::sparse_isa
+k_sampling_rate_mask	psascan_src/approx_rank.h	/^    static const long k_sampling_rate_mask;$/;"	m	language:C++	class:psascan_private::approx_rank
+k_sampling_rate_mask	psascan_src/approx_rank.h	/^const long approx_rank<k_sampling_rate_log>::k_sampling_rate_mask = (1L << k_sampling_rate_log) - 1;$/;"	m	language:C++	class:psascan_private::approx_rank
+k_sampling_rate_mask	psascan_src/sparse_isa.h	/^    static const long k_sampling_rate_mask;$/;"	m	language:C++	struct:psascan_private::sparse_isa
+k_sampling_rate_mask	psascan_src/sparse_isa.h	/^  ::k_sampling_rate_mask = (1L << k_sampling_rate_log) - 1;$/;"	m	language:C++	class:psascan_private::sparse_isa
+k_sblock_size	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned k_sblock_size;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_sblock_size	psascan_src/inmem_psascan_src/rank.h	/^  ::k_sblock_size = (1 << k_sblock_size_log);$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_sblock_size	psascan_src/rank.h	/^    static const unsigned k_sblock_size;$/;"	m	language:C++	class:psascan_private::rank4n
+k_sblock_size	psascan_src/rank.h	/^  ::k_sblock_size = (1 << k_sblock_size_log);$/;"	m	language:C++	class:psascan_private::rank4n
+k_sblock_size_mask	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned k_sblock_size_mask;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_sblock_size_mask	psascan_src/inmem_psascan_src/rank.h	/^  ::k_sblock_size_mask = (1 << k_sblock_size_log) - 1;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_sblock_size_mask	psascan_src/rank.h	/^    static const unsigned k_sblock_size_mask;$/;"	m	language:C++	class:psascan_private::rank4n
+k_sblock_size_mask	psascan_src/rank.h	/^  ::k_sblock_size_mask = (1 << k_sblock_size_log) - 1;$/;"	m	language:C++	class:psascan_private::rank4n
+k_sigma	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned k_sigma;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_sigma	psascan_src/inmem_psascan_src/rank.h	/^  ::k_sigma = (1 << k_sigma_log);$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_sigma	psascan_src/inmem_psascan_src/sparse_isa.h	/^  static const long k_sigma = 256;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::sparse_isa
+k_sigma	psascan_src/rank.h	/^    static const unsigned k_sigma;$/;"	m	language:C++	class:psascan_private::rank4n
+k_sigma	psascan_src/rank.h	/^  ::k_sigma = (1 << k_sigma_log);$/;"	m	language:C++	class:psascan_private::rank4n
+k_sigma	psascan_src/sparse_isa.h	/^    static const long k_sigma = 256;$/;"	m	language:C++	struct:psascan_private::sparse_isa
+k_sigma_mask	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned k_sigma_mask;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_sigma_mask	psascan_src/inmem_psascan_src/rank.h	/^  ::k_sigma_mask = (1 << k_sigma_log) - 1;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+k_sigma_mask	psascan_src/rank.h	/^    static const unsigned k_sigma_mask;$/;"	m	language:C++	class:psascan_private::rank4n
+k_sigma_mask	psascan_src/rank.h	/^  ::k_sigma_mask = (1 << k_sigma_log) - 1;$/;"	m	language:C++	class:psascan_private::rank4n
+lblock_async_write_code	psascan_src/compute_left_gap.h	/^void lblock_async_write_code(unsigned char* &slab, long &length, std::mutex &mtx,$/;"	f	language:C++	namespace:psascan_private
+lblock_handle_bv_part	psascan_src/compute_left_gap.h	/^void lblock_handle_bv_part(long part_beg, long part_end, long range_beg,$/;"	f	language:C++	namespace:psascan_private
+lcp_compare	psascan_src/em_compute_initial_ranks.h	/^inline int lcp_compare($/;"	f	language:C++	namespace:psascan_private
+lcp_compare	psascan_src/inmem_psascan_src/inmem_compute_initial_ranks.h	/^inline int lcp_compare(const unsigned char *text, const unsigned char *pat,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+lcp_compare	psascan_src/inmem_psascan_src/inmem_compute_initial_ranks.h	/^inline int lcp_compare(const unsigned char *text, long text_length,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+lcp_compare_2	psascan_src/em_compute_initial_ranks.h	/^int lcp_compare_2($/;"	f	language:C++	namespace:psascan_private
+left_cost	psascan_src/inmem_psascan_src/merge_schedule.h	/^  std::vector<int> left_cost;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::MergeSchedule
+left_size	psascan_src/inmem_psascan_src/merge_schedule.h	/^  int left_size(int n) const {$/;"	f	language:C++	class:psascan_private::inmem_psascan_private::MergeSchedule
+ll	psascan_src/uint40.h	/^    inline long ll() const$/;"	f	language:C++	class:uint40
+log2ceil	psascan_src/utils.cpp	/^long log2ceil(long x) {$/;"	f	language:C++	namespace:psascan_private::utils
+log2ceil	psascan_src/utils.h	/^long log2ceil(long x);$/;"	p	language:C++	namespace:psascan_private::utils
+log2floor	psascan_src/utils.cpp	/^long log2floor(long x) {$/;"	f	language:C++	namespace:psascan_private::utils
+log2floor	psascan_src/utils.h	/^long log2floor(long x);$/;"	p	language:C++	namespace:psascan_private::utils
+low	psascan_src/uint40.h	/^    uint32_t    low;$/;"	m	language:C++	class:uint40
+m_active_buf	psascan_src/async_backward_skip_stream_reader.h	/^  value_type *m_active_buf;$/;"	m	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+m_active_buf	psascan_src/async_bit_stream_writer.h	/^  unsigned char *m_active_buf;$/;"	m	language:C++	struct:psascan_private::async_bit_stream_writer
+m_active_buf	psascan_src/async_multifile_bit_stream_reader.h	/^  unsigned char *m_active_buf;$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_active_buf	psascan_src/async_stream_writer.h	/^  value_type *m_active_buf;$/;"	m	language:C++	struct:psascan_private::async_stream_writer
+m_active_buf	psascan_src/async_vbyte_stream_reader.h	/^  unsigned char *m_active_buf;$/;"	m	language:C++	struct:psascan_private::async_vbyte_stream_reader
+m_active_buf	psascan_src/distributed_file.h	/^  value_type *m_active_buf;$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_active_buf_filled	psascan_src/async_backward_skip_stream_reader.h	/^  long m_active_buf_filled;$/;"	m	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+m_active_buf_filled	psascan_src/async_bit_stream_writer.h	/^  long m_active_buf_filled;$/;"	m	language:C++	struct:psascan_private::async_bit_stream_writer
+m_active_buf_filled	psascan_src/async_multifile_bit_stream_reader.h	/^  long m_active_buf_filled;$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_active_buf_filled	psascan_src/async_stream_writer.h	/^  long m_active_buf_filled;$/;"	m	language:C++	struct:psascan_private::async_stream_writer
+m_active_buf_filled	psascan_src/async_vbyte_stream_reader.h	/^  long m_active_buf_filled;$/;"	m	language:C++	struct:psascan_private::async_vbyte_stream_reader
+m_active_buf_filled	psascan_src/distributed_file.h	/^  long m_active_buf_filled;$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_active_buf_pos	psascan_src/async_backward_skip_stream_reader.h	/^  long m_active_buf_pos;$/;"	m	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+m_active_buf_pos	psascan_src/async_multifile_bit_stream_reader.h	/^  long m_active_buf_pos;$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_active_buf_pos	psascan_src/async_vbyte_stream_reader.h	/^  long m_active_buf_pos;$/;"	m	language:C++	struct:psascan_private::async_vbyte_stream_reader
+m_active_buf_pos	psascan_src/distributed_file.h	/^  long m_active_buf_pos;$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_alloc_bytes	psascan_src/bitvector.h	/^    long m_alloc_bytes;$/;"	m	language:C++	struct:psascan_private::bitvector
+m_avail	psascan_src/async_backward_skip_stream_reader.h	/^  bool m_avail;$/;"	m	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+m_avail	psascan_src/async_bit_stream_writer.h	/^  bool m_avail;     \/\/ signals availability of buffer for I\/O thread$/;"	m	language:C++	struct:psascan_private::async_bit_stream_writer
+m_avail	psascan_src/async_multifile_bit_stream_reader.h	/^  bool m_avail;$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_avail	psascan_src/async_stream_writer.h	/^  bool m_avail;     \/\/ signals availability of buffer for I\/O thread$/;"	m	language:C++	struct:psascan_private::async_stream_writer
+m_avail	psascan_src/async_vbyte_stream_reader.h	/^  bool m_avail;$/;"	m	language:C++	struct:psascan_private::async_vbyte_stream_reader
+m_avail	psascan_src/distributed_file.h	/^  bool m_avail;$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_avail	psascan_src/inmem_psascan_src/inmem_update.h	/^  bool *m_avail;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::gap_parallel_updater
+m_avail	psascan_src/update.h	/^  bool *m_avail;$/;"	m	language:C++	struct:psascan_private::gap_parallel_updater
+m_avail_cv	psascan_src/inmem_psascan_src/inmem_update.h	/^  std::condition_variable m_avail_cv;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::gap_parallel_updater
+m_avail_cv	psascan_src/update.h	/^  std::condition_variable m_avail_cv;$/;"	m	language:C++	struct:psascan_private::gap_parallel_updater
+m_avail_mutex	psascan_src/inmem_psascan_src/inmem_update.h	/^  std::mutex m_avail_mutex;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::gap_parallel_updater
+m_avail_mutex	psascan_src/update.h	/^  std::mutex m_avail_mutex;$/;"	m	language:C++	struct:psascan_private::gap_parallel_updater
+m_avail_no_more	psascan_src/inmem_psascan_src/inmem_update.h	/^  bool m_avail_no_more;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::gap_parallel_updater
+m_avail_no_more	psascan_src/update.h	/^  bool m_avail_no_more;$/;"	m	language:C++	struct:psascan_private::gap_parallel_updater
+m_beg	psascan_src/multifile.h	/^  long m_beg;$/;"	m	language:C++	struct:psascan_private::single_file_info
+m_bit_pos	psascan_src/async_bit_stream_writer.h	/^  long m_bit_pos;$/;"	m	language:C++	struct:psascan_private::async_bit_stream_writer
+m_buf_size	psascan_src/async_backward_skip_stream_reader.h	/^  long m_buf_size;$/;"	m	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+m_buf_size	psascan_src/async_bit_stream_writer.h	/^  long m_buf_size;  \/\/ size of each of the buffers$/;"	m	language:C++	struct:psascan_private::async_bit_stream_writer
+m_buf_size	psascan_src/async_multifile_bit_stream_reader.h	/^  long m_buf_size;$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_buf_size	psascan_src/async_stream_writer.h	/^  long m_buf_size;  \/\/ size of each of the buffers$/;"	m	language:C++	struct:psascan_private::async_stream_writer
+m_buf_size	psascan_src/async_vbyte_stream_reader.h	/^  long m_buf_size;$/;"	m	language:C++	struct:psascan_private::async_vbyte_stream_reader
+m_buf_size	psascan_src/distributed_file.h	/^  long m_buf_size;$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_buffer	psascan_src/inmem_psascan_src/inmem_update.h	/^  const gap_buffer<block_offset_type> *m_buffer;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::gap_parallel_updater
+m_buffer	psascan_src/multifile_bit_stream_reader.h	/^  unsigned char *m_buffer;$/;"	m	language:C++	struct:psascan_private::multifile_bit_stream_reader
+m_buffer	psascan_src/update.h	/^  gap_buffer<block_offset_type> *m_buffer;$/;"	m	language:C++	struct:psascan_private::gap_parallel_updater
+m_bv	psascan_src/ranksel_support.h	/^  const bitvector *m_bv;$/;"	m	language:C++	struct:psascan_private::ranksel_support
+m_bwtsa	psascan_src/inmem_psascan_src/sparse_isa.h	/^  const pagearray_type *m_bwtsa;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::sparse_isa
+m_cblock_header	psascan_src/inmem_psascan_src/rank.h	/^    unsigned long *m_cblock_header;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+m_cblock_header	psascan_src/rank.h	/^    unsigned long *m_cblock_header;$/;"	m	language:C++	class:psascan_private::rank4n
+m_cblock_header2	psascan_src/inmem_psascan_src/rank.h	/^    unsigned long *m_cblock_header2;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+m_cblock_header2	psascan_src/rank.h	/^    unsigned long *m_cblock_header2;$/;"	m	language:C++	class:psascan_private::rank4n
+m_cblock_mapping	psascan_src/inmem_psascan_src/rank.h	/^    unsigned char *m_cblock_mapping;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+m_cblock_mapping	psascan_src/rank.h	/^    unsigned char *m_cblock_mapping;$/;"	m	language:C++	class:psascan_private::rank4n
+m_cblock_type	psascan_src/inmem_psascan_src/rank.h	/^    unsigned char *m_cblock_type;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+m_cblock_type	psascan_src/rank.h	/^    unsigned char *m_cblock_type;$/;"	m	language:C++	class:psascan_private::rank4n
+m_chunk	psascan_src/background_chunk_reader.h	/^    unsigned char *m_chunk;$/;"	m	language:C++	struct:psascan_private::background_chunk_reader
+m_chunk_length	psascan_src/background_chunk_reader.h	/^    long m_chunk_length;$/;"	m	language:C++	struct:psascan_private::background_chunk_reader
+m_chunk_size	psascan_src/ranksel_support.h	/^  long m_chunk_size;  \/\/ chunk size$/;"	m	language:C++	struct:psascan_private::ranksel_support
+m_content	psascan_src/gap_buffer.h	/^  value_type *m_content;$/;"	m	language:C++	struct:psascan_private::gap_buffer
+m_count	psascan_src/approx_rank.h	/^    long *m_count;$/;"	m	language:C++	class:psascan_private::approx_rank
+m_count	psascan_src/gap_array.h	/^  uint16_t *m_count;$/;"	m	language:C++	struct:psascan_private::gap_array_2n
+m_count	psascan_src/gap_array.h	/^  unsigned char *m_count;$/;"	m	language:C++	struct:psascan_private::buffered_gap_array
+m_count	psascan_src/inmem_psascan_src/inmem_gap_array.h	/^  unsigned char *m_count;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::inmem_gap_array
+m_count	psascan_src/inmem_psascan_src/rank.h	/^    unsigned long *m_count;  \/\/ symbol counts$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+m_count	psascan_src/inmem_psascan_src/sparse_isa.h	/^  long *m_count;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::sparse_isa
+m_count	psascan_src/rank.h	/^    unsigned long *m_count;  \/\/ symbol counts$/;"	m	language:C++	class:psascan_private::rank4n
+m_count	psascan_src/sparse_isa.h	/^    long *m_count;$/;"	m	language:C++	struct:psascan_private::sparse_isa
+m_cur	psascan_src/background_chunk_reader.h	/^    long m_cur;$/;"	m	language:C++	struct:psascan_private::background_chunk_reader
+m_cur_bit	psascan_src/async_multifile_bit_stream_reader.h	/^  long m_cur_bit;$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_cur_byte	psascan_src/async_multifile_bit_stream_reader.h	/^  long m_cur_byte;$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_cur_file	psascan_src/distributed_file.h	/^  long m_cur_file;  \/\/ iterates through [0..m_files_cnt) during reading$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_cur_file_read	psascan_src/distributed_file.h	/^  long m_cur_file_read;    \/\/ number of items read from the current file$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_cur_file_write	psascan_src/distributed_file.h	/^  long m_cur_file_write;   \/\/ number of items written to a current file$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_current_pos	psascan_src/gap_array.h	/^  long m_current_pos;$/;"	m	language:C++	struct:psascan_private::buffered_gap_array
+m_cv	psascan_src/async_backward_skip_stream_reader.h	/^  std::condition_variable m_cv;$/;"	m	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+m_cv	psascan_src/async_bit_stream_writer.h	/^  std::condition_variable m_cv;$/;"	m	language:C++	struct:psascan_private::async_bit_stream_writer
+m_cv	psascan_src/async_multifile_bit_stream_reader.h	/^  std::condition_variable m_cv;$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_cv	psascan_src/async_stream_writer.h	/^  std::condition_variable m_cv;$/;"	m	language:C++	struct:psascan_private::async_stream_writer
+m_cv	psascan_src/async_vbyte_stream_reader.h	/^  std::condition_variable m_cv;$/;"	m	language:C++	struct:psascan_private::async_vbyte_stream_reader
+m_cv	psascan_src/background_block_reader.h	/^    std::condition_variable m_cv;$/;"	m	language:C++	struct:psascan_private::background_block_reader
+m_cv	psascan_src/background_chunk_reader.h	/^    std::condition_variable m_cv;$/;"	m	language:C++	struct:psascan_private::background_chunk_reader
+m_cv	psascan_src/distributed_file.h	/^  std::condition_variable m_cv;$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_cv	psascan_src/gap_buffer.h	/^  std::condition_variable m_cv;$/;"	m	language:C++	struct:psascan_private::gap_buffer_poll
+m_data	psascan_src/background_block_reader.h	/^    unsigned char *m_data;$/;"	m	language:C++	struct:psascan_private::background_block_reader
+m_data	psascan_src/bitvector.h	/^    unsigned char *m_data;$/;"	m	language:C++	struct:psascan_private::bitvector
+m_end	psascan_src/background_chunk_reader.h	/^    long m_end;$/;"	m	language:C++	struct:psascan_private::background_chunk_reader
+m_end	psascan_src/multifile.h	/^  long m_end;$/;"	m	language:C++	struct:psascan_private::single_file_info
+m_excess	psascan_src/gap_array.h	/^  long *m_excess;$/;"	m	language:C++	struct:psascan_private::buffered_gap_array
+m_excess	psascan_src/gap_array.h	/^  std::vector<long> m_excess;  \/\/ all excess values are in RAM$/;"	m	language:C++	struct:psascan_private::gap_array_2n
+m_excess	psascan_src/inmem_psascan_src/inmem_gap_array.h	/^  std::vector<long> m_excess;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::inmem_gap_array
+m_excess_disk	psascan_src/gap_array.h	/^  long m_excess_disk;$/;"	m	language:C++	struct:psascan_private::buffered_gap_array
+m_excess_disk	psascan_src/gap_array.h	/^  long m_excess_disk;$/;"	m	language:C++	struct:psascan_private::gap_array_2n
+m_excess_filled	psascan_src/gap_array.h	/^  long m_excess_filled;$/;"	m	language:C++	struct:psascan_private::buffered_gap_array
+m_excess_mutex	psascan_src/gap_array.h	/^  std::mutex m_excess_mutex;$/;"	m	language:C++	struct:psascan_private::buffered_gap_array
+m_excess_mutex	psascan_src/gap_array.h	/^  std::mutex m_excess_mutex;$/;"	m	language:C++	struct:psascan_private::gap_array_2n
+m_excess_mutex	psascan_src/inmem_psascan_src/inmem_gap_array.h	/^  std::mutex m_excess_mutex;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::inmem_gap_array
+m_excess_ptr	psascan_src/gap_array.h	/^  long m_excess_ptr;$/;"	m	language:C++	struct:psascan_private::buffered_gap_array
+m_fetched	psascan_src/background_block_reader.h	/^    long m_fetched;$/;"	m	language:C++	struct:psascan_private::background_block_reader
+m_file	psascan_src/async_backward_skip_stream_reader.h	/^  std::FILE *m_file;$/;"	m	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+m_file	psascan_src/async_bit_stream_writer.h	/^  std::FILE *m_file;$/;"	m	language:C++	struct:psascan_private::async_bit_stream_writer
+m_file	psascan_src/async_multifile_bit_stream_reader.h	/^  std::FILE *m_file;       \/\/ file handler  $/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_file	psascan_src/async_stream_writer.h	/^  std::FILE *m_file;$/;"	m	language:C++	struct:psascan_private::async_stream_writer
+m_file	psascan_src/async_vbyte_stream_reader.h	/^  std::FILE *m_file;$/;"	m	language:C++	struct:psascan_private::async_vbyte_stream_reader
+m_file	psascan_src/background_block_reader.h	/^    std::FILE *m_file;$/;"	m	language:C++	struct:psascan_private::background_block_reader
+m_file	psascan_src/background_chunk_reader.h	/^    std::FILE *m_file;$/;"	m	language:C++	struct:psascan_private::background_chunk_reader
+m_file	psascan_src/distributed_file.h	/^  std::FILE *m_file;       \/\/ file handler$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_file	psascan_src/multifile_bit_stream_reader.h	/^  std::FILE *m_file;$/;"	m	language:C++	struct:psascan_private::multifile_bit_stream_reader
+m_file_beg	psascan_src/multifile_bit_stream_reader.h	/^  long m_file_beg;$/;"	m	language:C++	struct:psascan_private::multifile_bit_stream_reader
+m_file_end	psascan_src/multifile_bit_stream_reader.h	/^  long m_file_end;$/;"	m	language:C++	struct:psascan_private::multifile_bit_stream_reader
+m_file_id	psascan_src/async_multifile_bit_stream_reader.h	/^  long m_file_id;$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_filename	psascan_src/distributed_file.h	/^  std::string m_filename;  \/\/ file name base$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_filename	psascan_src/multifile.h	/^  std::string m_filename;$/;"	m	language:C++	struct:psascan_private::single_file_info
+m_files_cnt	psascan_src/distributed_file.h	/^  long m_files_cnt; \/\/ counts the files during writing$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_files_info	psascan_src/async_multifile_bit_stream_reader.h	/^  std::vector<single_file_info> m_files_info;$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_filled	psascan_src/gap_buffer.h	/^  long m_filled, m_size;$/;"	m	language:C++	struct:psascan_private::gap_buffer
+m_filled	psascan_src/multifile_bit_stream_reader.h	/^  long m_filled; \/\/ how many bits we have in a buffer$/;"	m	language:C++	struct:psascan_private::multifile_bit_stream_reader
+m_finished	psascan_src/async_backward_skip_stream_reader.h	/^  bool m_finished;$/;"	m	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+m_finished	psascan_src/async_bit_stream_writer.h	/^  bool m_finished;  \/\/ signals the end of writing$/;"	m	language:C++	struct:psascan_private::async_bit_stream_writer
+m_finished	psascan_src/async_multifile_bit_stream_reader.h	/^  bool m_finished;$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_finished	psascan_src/async_stream_writer.h	/^  bool m_finished;  \/\/ signals the end of writing$/;"	m	language:C++	struct:psascan_private::async_stream_writer
+m_finished	psascan_src/async_vbyte_stream_reader.h	/^  bool m_finished;$/;"	m	language:C++	struct:psascan_private::async_vbyte_stream_reader
+m_finished	psascan_src/distributed_file.h	/^  bool m_finished;$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_finished	psascan_src/inmem_psascan_src/inmem_update.h	/^  int m_finished;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::gap_parallel_updater
+m_finished	psascan_src/update.h	/^  int m_finished;$/;"	m	language:C++	struct:psascan_private::gap_parallel_updater
+m_finished_cv	psascan_src/inmem_psascan_src/inmem_update.h	/^  std::condition_variable m_finished_cv;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::gap_parallel_updater
+m_finished_cv	psascan_src/update.h	/^  std::condition_variable m_finished_cv;$/;"	m	language:C++	struct:psascan_private::gap_parallel_updater
+m_finished_mutex	psascan_src/inmem_psascan_src/inmem_update.h	/^  std::mutex m_finished_mutex;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::gap_parallel_updater
+m_finished_mutex	psascan_src/update.h	/^  std::mutex m_finished_mutex;$/;"	m	language:C++	struct:psascan_private::gap_parallel_updater
+m_freq_trunk	psascan_src/inmem_psascan_src/rank.h	/^    unsigned *m_freq_trunk;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+m_freq_trunk	psascan_src/rank.h	/^    unsigned *m_freq_trunk;$/;"	m	language:C++	class:psascan_private::rank4n
+m_gap_array	psascan_src/inmem_psascan_src/inmem_update.h	/^  inmem_gap_array *m_gap_array;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::gap_parallel_updater
+m_gap_array	psascan_src/update.h	/^  buffered_gap_array *m_gap_array;$/;"	m	language:C++	struct:psascan_private::gap_parallel_updater
+m_gap_writing_mutex	psascan_src/gap_array.h	/^  std::mutex m_gap_writing_mutex;$/;"	m	language:C++	struct:psascan_private::buffered_gap_array
+m_i0	psascan_src/inmem_psascan_src/sparse_isa.h	/^  long m_i0;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::sparse_isa
+m_i0	psascan_src/sparse_isa.h	/^    long m_i0;$/;"	m	language:C++	struct:psascan_private::sparse_isa
+m_idle_update	psascan_src/stream_info.h	/^  long double *m_idle_update;$/;"	m	language:C++	struct:psascan_private::stream_info
+m_idle_work	psascan_src/stream_info.h	/^  long double *m_idle_work;$/;"	m	language:C++	struct:psascan_private::stream_info
+m_joined	psascan_src/background_block_reader.h	/^    bool m_joined;$/;"	m	language:C++	struct:psascan_private::background_block_reader
+m_last_isa	psascan_src/inmem_psascan_src/sparse_isa.h	/^  long m_last_isa;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::sparse_isa
+m_last_isa	psascan_src/sparse_isa.h	/^    long m_last_isa;$/;"	m	language:C++	struct:psascan_private::sparse_isa
+m_length	psascan_src/gap_array.h	/^  long m_length;$/;"	m	language:C++	struct:psascan_private::buffered_gap_array
+m_length	psascan_src/gap_array.h	/^  long m_length;$/;"	m	language:C++	struct:psascan_private::gap_array_2n
+m_length	psascan_src/inmem_psascan_src/inmem_gap_array.h	/^  long m_length;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::inmem_gap_array
+m_length	psascan_src/inmem_psascan_src/pagearray.h	/^  long m_length;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+m_length	psascan_src/inmem_psascan_src/rank.h	/^    unsigned long m_length;   \/\/ length of original sequence$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+m_length	psascan_src/inmem_psascan_src/sparse_isa.h	/^  long m_length;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::sparse_isa
+m_length	psascan_src/rank.h	/^    unsigned long m_length;   \/\/ length of original sequence$/;"	m	language:C++	class:psascan_private::rank4n
+m_length	psascan_src/ranksel_support.h	/^  long m_length;      \/\/ length of bitvector$/;"	m	language:C++	struct:psascan_private::ranksel_support
+m_length	psascan_src/sparse_isa.h	/^    long m_length;$/;"	m	language:C++	struct:psascan_private::sparse_isa
+m_list	psascan_src/approx_rank.h	/^    long **m_list;$/;"	m	language:C++	class:psascan_private::approx_rank
+m_list_size	psascan_src/approx_rank.h	/^    long *m_list_size;$/;"	m	language:C++	class:psascan_private::approx_rank
+m_max_items	psascan_src/distributed_file.h	/^  long m_max_items;        \/\/ max items per file$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_mutex	psascan_src/async_backward_skip_stream_reader.h	/^  std::mutex m_mutex;$/;"	m	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+m_mutex	psascan_src/async_bit_stream_writer.h	/^  std::mutex m_mutex;$/;"	m	language:C++	struct:psascan_private::async_bit_stream_writer
+m_mutex	psascan_src/async_multifile_bit_stream_reader.h	/^  std::mutex m_mutex;$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_mutex	psascan_src/async_stream_writer.h	/^  std::mutex m_mutex;$/;"	m	language:C++	struct:psascan_private::async_stream_writer
+m_mutex	psascan_src/async_vbyte_stream_reader.h	/^  std::mutex m_mutex;$/;"	m	language:C++	struct:psascan_private::async_vbyte_stream_reader
+m_mutex	psascan_src/background_block_reader.h	/^    std::mutex m_mutex;$/;"	m	language:C++	struct:psascan_private::background_block_reader
+m_mutex	psascan_src/background_chunk_reader.h	/^    std::mutex m_mutex;$/;"	m	language:C++	struct:psascan_private::background_chunk_reader
+m_mutex	psascan_src/distributed_file.h	/^  std::mutex m_mutex;$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_mutex	psascan_src/gap_buffer.h	/^  std::mutex m_mutex;$/;"	m	language:C++	struct:psascan_private::gap_buffer_poll
+m_mutex	psascan_src/stream_info.h	/^  std::mutex m_mutex;$/;"	m	language:C++	struct:psascan_private::stream_info
+m_offset	psascan_src/multifile_bit_stream_reader.h	/^  long m_offset; \/\/ number of the first bit in the buffer$/;"	m	language:C++	struct:psascan_private::multifile_bit_stream_reader
+m_origin	psascan_src/inmem_psascan_src/pagearray.h	/^  value_type *m_origin;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+m_pageindex	psascan_src/inmem_psascan_src/pagearray.h	/^  value_type **m_pageindex;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+m_passive_buf	psascan_src/async_backward_skip_stream_reader.h	/^  value_type *m_passive_buf;$/;"	m	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+m_passive_buf	psascan_src/async_bit_stream_writer.h	/^  unsigned char *m_passive_buf;$/;"	m	language:C++	struct:psascan_private::async_bit_stream_writer
+m_passive_buf	psascan_src/async_multifile_bit_stream_reader.h	/^  unsigned char *m_passive_buf;$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_passive_buf	psascan_src/async_stream_writer.h	/^  value_type *m_passive_buf;$/;"	m	language:C++	struct:psascan_private::async_stream_writer
+m_passive_buf	psascan_src/async_vbyte_stream_reader.h	/^  unsigned char *m_passive_buf;$/;"	m	language:C++	struct:psascan_private::async_vbyte_stream_reader
+m_passive_buf	psascan_src/distributed_file.h	/^  value_type *m_passive_buf;$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_passive_buf_filled	psascan_src/async_backward_skip_stream_reader.h	/^  long m_passive_buf_filled;$/;"	m	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+m_passive_buf_filled	psascan_src/async_bit_stream_writer.h	/^  long m_passive_buf_filled;$/;"	m	language:C++	struct:psascan_private::async_bit_stream_writer
+m_passive_buf_filled	psascan_src/async_multifile_bit_stream_reader.h	/^  long m_passive_buf_filled;$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_passive_buf_filled	psascan_src/async_stream_writer.h	/^  long m_passive_buf_filled;$/;"	m	language:C++	struct:psascan_private::async_stream_writer
+m_passive_buf_filled	psascan_src/async_vbyte_stream_reader.h	/^  long m_passive_buf_filled;$/;"	m	language:C++	struct:psascan_private::async_vbyte_stream_reader
+m_passive_buf_filled	psascan_src/distributed_file.h	/^  long m_passive_buf_filled;$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_passive_chunk	psascan_src/background_chunk_reader.h	/^    unsigned char *m_passive_chunk;$/;"	m	language:C++	struct:psascan_private::background_chunk_reader
+m_psa	psascan_src/sparse_isa.h	/^    const saidx_t *m_psa;$/;"	m	language:C++	struct:psascan_private::sparse_isa
+m_queue	psascan_src/gap_buffer.h	/^  std::queue<gap_buffer_type*> m_queue;$/;"	m	language:C++	struct:psascan_private::gap_buffer_poll
+m_rank	psascan_src/inmem_psascan_src/sparse_isa.h	/^  const rank_type *m_rank;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::sparse_isa
+m_rank	psascan_src/sparse_isa.h	/^    const approx_rank_type *m_rank;$/;"	m	language:C++	struct:psascan_private::sparse_isa
+m_rare_trunk	psascan_src/inmem_psascan_src/rank.h	/^    unsigned *m_rare_trunk;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+m_rare_trunk	psascan_src/rank.h	/^    unsigned *m_rare_trunk;$/;"	m	language:C++	class:psascan_private::rank4n
+m_sblock_header	psascan_src/inmem_psascan_src/rank.h	/^    unsigned long *m_sblock_header;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+m_sblock_header	psascan_src/rank.h	/^    unsigned long *m_sblock_header;$/;"	m	language:C++	class:psascan_private::rank4n
+m_sequential_read_initialized	psascan_src/gap_array.h	/^  bool m_sequential_read_initialized;$/;"	m	language:C++	struct:psascan_private::buffered_gap_array
+m_shift	psascan_src/inmem_psascan_src/pagearray.h	/^  long m_shift;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+m_signal_read_next_chunk	psascan_src/background_chunk_reader.h	/^    bool m_signal_read_next_chunk;$/;"	m	language:C++	struct:psascan_private::background_chunk_reader
+m_signal_stop	psascan_src/background_block_reader.h	/^    bool m_signal_stop;$/;"	m	language:C++	struct:psascan_private::background_block_reader
+m_signal_stop	psascan_src/background_chunk_reader.h	/^    bool m_signal_stop;$/;"	m	language:C++	struct:psascan_private::background_chunk_reader
+m_size	psascan_src/background_block_reader.h	/^    long m_size;$/;"	m	language:C++	struct:psascan_private::background_block_reader
+m_size	psascan_src/gap_buffer.h	/^  long m_filled, m_size;$/;"	m	language:C++	struct:psascan_private::gap_buffer
+m_sorted_excess	psascan_src/gap_array.h	/^  long *m_sorted_excess;$/;"	m	language:C++	struct:psascan_private::buffered_gap_array
+m_sparse_isa	psascan_src/inmem_psascan_src/sparse_isa.h	/^  long *m_sparse_isa;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::sparse_isa
+m_sparse_isa	psascan_src/sparse_isa.h	/^    long *m_sparse_isa;$/;"	m	language:C++	struct:psascan_private::sparse_isa
+m_sparse_rank	psascan_src/ranksel_support.h	/^  long *m_sparse_rank;$/;"	m	language:C++	struct:psascan_private::ranksel_support
+m_start	psascan_src/background_block_reader.h	/^    long m_start;$/;"	m	language:C++	struct:psascan_private::background_block_reader
+m_state	psascan_src/distributed_file.h	/^  } m_state;$/;"	m	language:C++	struct:psascan_private::distributed_file	typeref:enum:psascan_private::distributed_file::__anon1
+m_storage_filename	psascan_src/gap_array.h	/^  std::string m_storage_filename;$/;"	m	language:C++	struct:psascan_private::buffered_gap_array
+m_storage_filename	psascan_src/gap_array.h	/^  std::string m_storage_filename;$/;"	m	language:C++	struct:psascan_private::gap_array_2n
+m_streamed	psascan_src/stream_info.h	/^  long *m_streamed;        \/\/ how many bytes streamed by each thread$/;"	m	language:C++	struct:psascan_private::stream_info
+m_text	psascan_src/inmem_psascan_src/sparse_isa.h	/^  const unsigned char *m_text;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::sparse_isa
+m_text	psascan_src/sparse_isa.h	/^    const unsigned char *m_text;$/;"	m	language:C++	struct:psascan_private::sparse_isa
+m_thread	psascan_src/async_backward_skip_stream_reader.h	/^  std::thread *m_thread;$/;"	m	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+m_thread	psascan_src/async_bit_stream_writer.h	/^  std::thread *m_thread;$/;"	m	language:C++	struct:psascan_private::async_bit_stream_writer
+m_thread	psascan_src/async_multifile_bit_stream_reader.h	/^  std::thread *m_thread;$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_thread	psascan_src/async_stream_writer.h	/^  std::thread *m_thread;$/;"	m	language:C++	struct:psascan_private::async_stream_writer
+m_thread	psascan_src/async_vbyte_stream_reader.h	/^  std::thread *m_thread;$/;"	m	language:C++	struct:psascan_private::async_vbyte_stream_reader
+m_thread	psascan_src/background_block_reader.h	/^    std::thread *m_thread;$/;"	m	language:C++	struct:psascan_private::background_block_reader
+m_thread	psascan_src/background_chunk_reader.h	/^    std::thread *m_thread;$/;"	m	language:C++	struct:psascan_private::background_chunk_reader
+m_thread	psascan_src/distributed_file.h	/^  std::thread *m_thread;$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_thread_count	psascan_src/stream_info.h	/^  long m_thread_count;     \/\/ number of threads$/;"	m	language:C++	struct:psascan_private::stream_info
+m_threads	psascan_src/inmem_psascan_src/inmem_update.h	/^  std::thread **m_threads;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::gap_parallel_updater
+m_threads	psascan_src/update.h	/^  std::thread **m_threads;$/;"	m	language:C++	struct:psascan_private::gap_parallel_updater
+m_threads_cnt	psascan_src/inmem_psascan_src/inmem_update.h	/^  int m_threads_cnt;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::gap_parallel_updater
+m_threads_cnt	psascan_src/update.h	/^  int m_threads_cnt;$/;"	m	language:C++	struct:psascan_private::gap_parallel_updater
+m_timestamp	psascan_src/stream_info.h	/^  long double m_timestamp; \/\/ when the streaming started$/;"	m	language:C++	struct:psascan_private::stream_info
+m_tostream	psascan_src/stream_info.h	/^  long m_tostream;         \/\/ total text length to stream$/;"	m	language:C++	struct:psascan_private::stream_info
+m_total_excess	psascan_src/gap_array.h	/^  long m_total_excess; $/;"	m	language:C++	struct:psascan_private::buffered_gap_array
+m_total_read_buf	psascan_src/async_multifile_bit_stream_reader.h	/^  long m_total_read_buf;   \/\/ total number of items read from files into buffers$/;"	m	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+m_total_read_buf	psascan_src/distributed_file.h	/^  long m_total_read_buf;   \/\/ total number of items read from files into buffers$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_total_read_user	psascan_src/distributed_file.h	/^  long m_total_read_user;  \/\/ total number of items read by the user$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_total_write	psascan_src/distributed_file.h	/^  long m_total_write;      \/\/ total number of written items$/;"	m	language:C++	struct:psascan_private::distributed_file
+m_update_count	psascan_src/stream_info.h	/^  long m_update_count;     \/\/ number of updates$/;"	m	language:C++	struct:psascan_private::stream_info
+m_worker_threads	psascan_src/gap_buffer.h	/^  long m_worker_threads;$/;"	m	language:C++	struct:psascan_private::gap_buffer_poll
+m_worker_threads_finished	psascan_src/gap_buffer.h	/^  long m_worker_threads_finished;  \/\/ to detect when all threads finished$/;"	m	language:C++	struct:psascan_private::gap_buffer_poll
+main	main.cpp	/^int main(int argc, char **argv) {$/;"	f	language:C++
+make_new_file	psascan_src/distributed_file.h	/^  void make_new_file() {$/;"	f	language:C++	struct:psascan_private::distributed_file
+max	psascan_src/uint40.h	/^    static uint40 max() { return uint40(std::numeric_limits<uint32_t>::max(),$/;"	f	language:C++	class:std::numeric_limits
+merge	psascan_src/merge.h	/^void merge(std::string output_filename, long ram_use, std::vector<half_block_info<block_offset_type> > &hblock_info) {$/;"	f	language:C++	namespace:psascan_private
+merge_bwt	psascan_src/bwt_merge.h	/^long merge_bwt(const unsigned char *left_bwt, const unsigned char *right_bwt,$/;"	f	language:C++	namespace:psascan_private
+merge_bwt_aux	psascan_src/bwt_merge.h	/^void merge_bwt_aux(long beg, long end, long left_ptr, long right_ptr,$/;"	f	language:C++	namespace:psascan_private
+min	psascan_src/uint40.h	/^    static uint40 min() { return uint40(std::numeric_limits<uint32_t>::min(),$/;"	f	language:C++	class:std::numeric_limits
+multifile	psascan_src/multifile.h	/^struct multifile {$/;"	s	language:C++	namespace:psascan_private
+multifile_bit_stream_reader	psascan_src/multifile_bit_stream_reader.h	/^  multifile_bit_stream_reader(const multifile *m) {$/;"	f	language:C++	struct:psascan_private::multifile_bit_stream_reader
+multifile_bit_stream_reader	psascan_src/multifile_bit_stream_reader.h	/^struct multifile_bit_stream_reader {$/;"	s	language:C++	namespace:psascan_private
+n_cblocks	psascan_src/inmem_psascan_src/rank.h	/^    unsigned long n_cblocks;  \/\/ number of context blocks$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+n_cblocks	psascan_src/rank.h	/^    unsigned long n_cblocks;  \/\/ number of context blocks$/;"	m	language:C++	class:psascan_private::rank4n
+n_chunks	psascan_src/ranksel_support.h	/^  long n_chunks;      \/\/ number of chunks$/;"	m	language:C++	struct:psascan_private::ranksel_support
+n_left_merges	psascan_src/inmem_psascan_src/merge_schedule.h	/^  float n_left_merges(int n) const {$/;"	f	language:C++	class:psascan_private::inmem_psascan_private::MergeSchedule
+n_right_merges	psascan_src/inmem_psascan_src/merge_schedule.h	/^  float n_right_merges(int n) const {$/;"	f	language:C++	class:psascan_private::inmem_psascan_private::MergeSchedule
+n_sblocks	psascan_src/inmem_psascan_src/rank.h	/^    unsigned long n_sblocks;  \/\/ number of super blocks$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+n_sblocks	psascan_src/rank.h	/^    unsigned long n_sblocks;  \/\/ number of super blocks$/;"	m	language:C++	class:psascan_private::rank4n
+numeric_limits	psascan_src/uint40.h	/^class numeric_limits<uint40> {$/;"	c	language:C++	namespace:std
+open_file	psascan_src/utils.cpp	/^std::FILE *open_file(std::string fname, std::string mode) {$/;"	f	language:C++	namespace:psascan_private::utils
+open_file	psascan_src/utils.h	/^std::FILE *open_file(std::string fname, std::string mode);$/;"	p	language:C++	namespace:psascan_private::utils
+open_file_for_index	psascan_src/multifile_bit_stream_reader.h	/^  void open_file_for_index(long i) {$/;"	f	language:C++	struct:psascan_private::multifile_bit_stream_reader
+open_next_file	psascan_src/distributed_file.h	/^  void open_next_file() {$/;"	f	language:C++	struct:psascan_private::distributed_file
+operator !=	psascan_src/uint40.h	/^    inline bool operator!= (const uint40& b) const$/;"	f	language:C++	class:uint40
+operator ++	psascan_src/uint40.h	/^    inline uint40& operator++ ()$/;"	f	language:C++	class:uint40
+operator +=	psascan_src/uint40.h	/^    inline uint40& operator+= (const uint40& b)$/;"	f	language:C++	class:uint40
+operator --	psascan_src/uint40.h	/^    inline uint40& operator-- ()$/;"	f	language:C++	class:uint40
+operator <	psascan_src/half_block_info.h	/^  bool operator < (const half_block_info &i) const {$/;"	f	language:C++	struct:psascan_private::half_block_info
+operator <	psascan_src/uint40.h	/^    inline bool operator< (const uint40& b) const$/;"	f	language:C++	class:uint40
+operator <<	psascan_src/uint40.h	/^    friend std::ostream& operator<< (std::ostream& os, const uint40& a)$/;"	f	language:C++	class:uint40
+operator <=	psascan_src/uint40.h	/^    inline bool operator<= (const uint40& b) const$/;"	f	language:C++	class:uint40
+operator ==	psascan_src/uint40.h	/^    inline bool operator== (const uint40& b) const$/;"	f	language:C++	class:uint40
+operator >	psascan_src/uint40.h	/^    inline bool operator> (const uint40& b) const$/;"	f	language:C++	class:uint40
+operator >=	psascan_src/uint40.h	/^    inline bool operator>= (const uint40& b) const$/;"	f	language:C++	class:uint40
+operator []	psascan_src/inmem_psascan_src/pagearray.h	/^  inline value_type &operator[] (long i) const {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+operator sa_type	psascan_src/inmem_psascan_src/bwtsa.h	/^  inline operator sa_type() const {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::bwtsa_t
+operator uint64_t	psascan_src/uint40.h	/^    inline operator uint64_t() const$/;"	f	language:C++	class:uint40
+owns_page	psascan_src/inmem_psascan_src/pagearray.h	/^  inline bool owns_page(value_type *p) const {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+pSAscan	psascan_src/psascan.h	/^void pSAscan(std::string input_filename, std::string output_filename,$/;"	f	language:C++
+pSAscan	psascan_src/psascan.h	/^void pSAscan(std::string input_filename, std::string output_filename,$/;"	f	language:C++	namespace:psascan_private
+pagearray	psascan_src/inmem_psascan_src/pagearray.h	/^  pagearray(value_type *begin, value_type *end) {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+pagearray	psascan_src/inmem_psascan_src/pagearray.h	/^  pagearray(value_type *origin, long length) {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+pagearray	psascan_src/inmem_psascan_src/pagearray.h	/^struct pagearray {$/;"	s	language:C++	namespace:psascan_private::inmem_psascan_private
+pagearray_type	psascan_src/inmem_psascan_src/pagearray.h	/^  typedef pagearray<value_type, k_pagesize_log> pagearray_type;$/;"	t	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+pagearray_type	psascan_src/inmem_psascan_src/rank.h	/^    typedef pagearray<bwtsa_t<saidx_t>, pagesize_log> pagearray_type;$/;"	t	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+pagesize	psascan_src/inmem_psascan_src/pagearray.h	/^  static const unsigned pagesize = (1U << k_pagesize_log);$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+pagesize	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned pagesize = (1U << pagesize_log);$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+pagesize_log	psascan_src/inmem_psascan_src/pagearray.h	/^  static const unsigned pagesize_log = k_pagesize_log;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+pagesize_mask	psascan_src/inmem_psascan_src/pagearray.h	/^  static const unsigned pagesize_mask = (1U << k_pagesize_log) - 1;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+pagesize_mask	psascan_src/inmem_psascan_src/rank.h	/^    static const unsigned pagesize_mask = (1U << pagesize_log) - 1;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+parallel_copy	psascan_src/inmem_psascan_src/parallel_copy.h	/^void parallel_copy(const T *src, S *dest, long length, long max_threads) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+parallel_copy	psascan_src/inmem_psascan_src/parallel_copy.h	/^void parallel_copy(const bwtsa_t<int> *src, unsigned char *dest, long length, long max_threads) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+parallel_copy	psascan_src/inmem_psascan_src/parallel_copy.h	/^void parallel_copy(const bwtsa_t<uint40> *src, unsigned char *dest, long length, long max_threads) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+parallel_copy	psascan_src/parallel_utils.h	/^void parallel_copy(const T *src, S *dest, long length, long max_threads) {$/;"	f	language:C++	namespace:psascan_private::parallel_utils
+parallel_copy_aux	psascan_src/inmem_psascan_src/parallel_copy.h	/^void parallel_copy_aux(const T *src, S *dest, long length) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+parallel_copy_aux	psascan_src/inmem_psascan_src/parallel_copy.h	/^void parallel_copy_aux(const bwtsa_t<int> *src, unsigned char *dest, long length) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+parallel_copy_aux	psascan_src/inmem_psascan_src/parallel_copy.h	/^void parallel_copy_aux(const bwtsa_t<uint40> *src, unsigned char *dest, long length) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+parallel_copy_aux	psascan_src/parallel_utils.h	/^void parallel_copy_aux(const T *src, S *dest, long length) {$/;"	f	language:C++	namespace:psascan_private::parallel_utils
+parallel_expand	psascan_src/inmem_psascan_src/parallel_expand.h	/^S *parallel_expand(T *tab, long length, long max_threads) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+parallel_expand_aux	psascan_src/inmem_psascan_src/parallel_expand.h	/^void parallel_expand_aux(const T *src, S *dest, long length) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+parallel_fill	psascan_src/parallel_utils.h	/^void parallel_fill(T *tab, long length, T x, long max_threads) {$/;"	f	language:C++	namespace:psascan_private::parallel_utils
+parallel_fill_aux	psascan_src/parallel_utils.h	/^void parallel_fill_aux(T *tab, long length, T x) {$/;"	f	language:C++	namespace:psascan_private::parallel_utils
+parallel_merge	psascan_src/inmem_psascan_src/parallel_merge.h	/^pagearray_type *parallel_merge(pagearray_type *l_pagearray,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+parallel_merge_aux	psascan_src/inmem_psascan_src/parallel_merge.h	/^void parallel_merge_aux($/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+parallel_shrink	psascan_src/inmem_psascan_src/parallel_shrink.h	/^S *parallel_shrink(T *tab, long length, long max_threads) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+parallel_shrink_aux	psascan_src/inmem_psascan_src/parallel_shrink.h	/^void parallel_shrink_aux(T *src, S *dest, long length) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+parallel_stream	psascan_src/stream.h	/^void parallel_stream($/;"	f	language:C++	namespace:psascan_private
+parallel_update	psascan_src/inmem_psascan_src/inmem_update.h	/^  static void parallel_update(gap_parallel_updater<T> *updater, int id) {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::gap_parallel_updater
+parallel_update	psascan_src/update.h	/^  static void parallel_update(gap_parallel_updater<T> *updater, int id) {$/;"	f	language:C++	struct:psascan_private::gap_parallel_updater
+parallel_utils	psascan_src/parallel_utils.h	/^namespace parallel_utils {$/;"	n	language:C++	namespace:psascan_private
+partial_sufsort	psascan_src/partial_sufsort.h	/^std::vector<half_block_info<block_offset_type> > partial_sufsort(std::string text_filename, std::string output_filename,$/;"	f	language:C++	namespace:psascan_private
+permute_to_plain_array	psascan_src/inmem_psascan_src/pagearray.h	/^  void permute_to_plain_array(long max_threads) {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+permute_to_plain_array_aux	psascan_src/inmem_psascan_src/pagearray.h	/^  static void permute_to_plain_array_aux(pagearray_type &a,$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+print_schedule	psascan_src/inmem_psascan_src/merge_schedule.h	/^void print_schedule(const MergeSchedule & sched, int n) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+print_schedule	psascan_src/inmem_psascan_src/merge_schedule.h	/^void print_schedule(const MergeSchedule & sched, int n, std::string indent) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+process_block	psascan_src/partial_sufsort.h	/^void process_block(long block_beg, long block_end, long text_length, long ram_use,$/;"	f	language:C++	namespace:psascan_private
+process_group_of_chunks	psascan_src/ranksel_support.h	/^  static void process_group_of_chunks(long group_beg, long group_end,$/;"	f	language:C++	struct:psascan_private::ranksel_support
+program_name	main.cpp	/^char *program_name;$/;"	v	language:C++
+psa	psascan_src/half_block_info.h	/^  distributed_file<block_offset_type> *psa;$/;"	m	language:C++	struct:psascan_private::half_block_info
+psascan_private	psascan_src/approx_rank.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/async_backward_skip_stream_reader.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/async_bit_stream_writer.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/async_multifile_bit_stream_reader.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/async_stream_writer.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/async_vbyte_stream_reader.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/background_block_reader.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/background_chunk_reader.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/bitvector.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/bwt_merge.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/compute_gap.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/compute_left_gap.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/compute_right_gap.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/distributed_file.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/em_compute_initial_ranks.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/gap_array.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/gap_buffer.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/half_block_info.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/bwtsa.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/change_gt_reference_point.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/compute_initial_gt_bitvectors.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/divsufsort_template.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/initial_partial_sufsort.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/inmem_bwt_from_sa.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/inmem_bwtsa_merge.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/inmem_compute_gap.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/inmem_compute_initial_ranks.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/inmem_gap_array.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/inmem_psascan.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/inmem_stream.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/inmem_update.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/merge_schedule.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/pagearray.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/parallel_copy.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/parallel_expand.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/parallel_merge.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/parallel_shrink.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/rank.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/sparse_isa.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/inmem_psascan_src/srank_aux.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/merge.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/multifile.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/multifile_bit_stream_reader.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/parallel_utils.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/partial_sufsort.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/psascan.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/rank.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/ranksel_support.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/sparse_isa.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/stream.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/stream_info.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/update.h	/^namespace psascan_private {$/;"	n	language:C++
+psascan_private	psascan_src/utils.cpp	/^namespace psascan_private {$/;"	n	language:C++	file:
+psascan_private	psascan_src/utils.h	/^namespace psascan_private {$/;"	n	language:C++
+query	psascan_src/inmem_psascan_src/sparse_isa.h	/^  inline long query(long j) const {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::sparse_isa
+query	psascan_src/sparse_isa.h	/^    inline long query(long j) const {$/;"	f	language:C++	struct:psascan_private::sparse_isa
+random_int	psascan_src/utils.cpp	/^int random_int(int p, int r) {$/;"	f	language:C++	namespace:psascan_private::utils
+random_int	psascan_src/utils.h	/^int random_int(int p, int r);$/;"	p	language:C++	namespace:psascan_private::utils
+random_long	psascan_src/utils.cpp	/^long random_long(long p, long r) {$/;"	f	language:C++	namespace:psascan_private::utils
+random_long	psascan_src/utils.h	/^long random_long(long p, long r);$/;"	p	language:C++	namespace:psascan_private::utils
+random_shuffle	psascan_src/inmem_psascan_src/pagearray.h	/^  void random_shuffle() {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+random_string_hash	psascan_src/utils.cpp	/^std::string random_string_hash() {$/;"	f	language:C++	namespace:psascan_private::utils
+random_string_hash	psascan_src/utils.h	/^std::string random_string_hash();$/;"	p	language:C++	namespace:psascan_private::utils
+range_sum	psascan_src/bitvector.h	/^    long range_sum(long beg, long end) const {$/;"	f	language:C++	struct:psascan_private::bitvector
+rank	psascan_src/approx_rank.h	/^    inline long rank(long i, unsigned char c) const {$/;"	f	language:C++	class:psascan_private::approx_rank
+rank	psascan_src/inmem_psascan_src/rank.h	/^    inline long rank(long i, unsigned char c) const {$/;"	f	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+rank	psascan_src/rank.h	/^    inline long rank(long i, unsigned char c) const {$/;"	f	language:C++	class:psascan_private::rank4n
+rank	psascan_src/ranksel_support.h	/^  inline long rank(long i) const {$/;"	f	language:C++	struct:psascan_private::ranksel_support
+rank0	psascan_src/ranksel_support.h	/^  inline long rank0(long i) const {$/;"	f	language:C++	struct:psascan_private::ranksel_support
+rank4n	psascan_src/inmem_psascan_src/rank.h	/^    rank4n(const pagearray_type *ptext, unsigned long length, unsigned max_threads) {$/;"	f	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+rank4n	psascan_src/inmem_psascan_src/rank.h	/^class rank4n {$/;"	c	language:C++	namespace:psascan_private::inmem_psascan_private
+rank4n	psascan_src/rank.h	/^    rank4n(const unsigned char *text, unsigned long length, unsigned max_threads) {$/;"	f	language:C++	class:psascan_private::rank4n
+rank4n	psascan_src/rank.h	/^class rank4n {$/;"	c	language:C++	namespace:psascan_private
+ranksel_support	psascan_src/ranksel_support.h	/^  ranksel_support(const bitvector *bv, long length, long max_threads) {$/;"	f	language:C++	struct:psascan_private::ranksel_support
+ranksel_support	psascan_src/ranksel_support.h	/^struct ranksel_support {$/;"	s	language:C++	namespace:psascan_private
+rblock_async_write_code	psascan_src/compute_right_gap.h	/^void rblock_async_write_code(unsigned char* &slab, long &length, std::mutex &mtx,$/;"	f	language:C++	namespace:psascan_private
+rblock_handle_bv_part	psascan_src/compute_right_gap.h	/^void rblock_handle_bv_part(long part_beg, long part_end, long range_beg,$/;"	f	language:C++	namespace:psascan_private
+read	psascan_src/async_backward_skip_stream_reader.h	/^  inline value_type read() {$/;"	f	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+read	psascan_src/async_multifile_bit_stream_reader.h	/^  inline bool read() {$/;"	f	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+read	psascan_src/async_vbyte_stream_reader.h	/^  inline value_type read() {$/;"	f	language:C++	struct:psascan_private::async_vbyte_stream_reader
+read	psascan_src/distributed_file.h	/^  inline value_type read() {$/;"	f	language:C++	struct:psascan_private::distributed_file
+read	psascan_src/multifile_bit_stream_reader.h	/^  inline bool read() {$/;"	f	language:C++	struct:psascan_private::multifile_bit_stream_reader
+read_block	psascan_src/utils.cpp	/^void read_block(std::FILE *f, long beg, long length, unsigned char *b) {$/;"	f	language:C++	namespace:psascan_private::utils
+read_block	psascan_src/utils.cpp	/^void read_block(std::string fname, long beg, long length, unsigned char *b) {$/;"	f	language:C++	namespace:psascan_private::utils
+read_block	psascan_src/utils.h	/^void read_block(std::FILE *f, long beg, long length, unsigned char *b);$/;"	p	language:C++	namespace:psascan_private::utils
+read_block	psascan_src/utils.h	/^void read_block(std::string fname, long beg, long length, unsigned char *b);$/;"	p	language:C++	namespace:psascan_private::utils
+read_n_objects_from_file	psascan_src/utils.h	/^void read_n_objects_from_file(value_type* tab, long length, std::FILE *f) {$/;"	f	language:C++	namespace:psascan_private::utils
+read_n_objects_from_file	psascan_src/utils.h	/^void read_n_objects_from_file(value_type* tab, long length, std::string fname) {$/;"	f	language:C++	namespace:psascan_private::utils
+read_objects_from_file	psascan_src/utils.h	/^void read_objects_from_file(value_type* &tab, long &length, std::string fname) {$/;"	f	language:C++	namespace:psascan_private::utils
+receive_new_buffer	psascan_src/async_backward_skip_stream_reader.h	/^  void receive_new_buffer() {$/;"	f	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+receive_new_buffer	psascan_src/async_multifile_bit_stream_reader.h	/^  void receive_new_buffer() {$/;"	f	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+receive_new_buffer	psascan_src/async_vbyte_stream_reader.h	/^  void receive_new_buffer(long skipped_bytes) {$/;"	f	language:C++	struct:psascan_private::async_vbyte_stream_reader
+receive_new_buffer	psascan_src/distributed_file.h	/^  void receive_new_buffer() {$/;"	f	language:C++	struct:psascan_private::distributed_file
+refill	psascan_src/multifile_bit_stream_reader.h	/^  void refill(long offset) {$/;"	f	language:C++	struct:psascan_private::multifile_bit_stream_reader
+refine_range	psascan_src/em_compute_initial_ranks.h	/^void refine_range($/;"	f	language:C++	namespace:psascan_private
+refine_range	psascan_src/inmem_psascan_src/inmem_compute_initial_ranks.h	/^void refine_range(const unsigned char *text, long block_beg,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+refine_range	psascan_src/inmem_psascan_src/inmem_compute_initial_ranks.h	/^void refine_range(const unsigned char *text, long text_length,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+refine_range_2	psascan_src/em_compute_initial_ranks.h	/^void refine_range_2($/;"	f	language:C++	namespace:psascan_private
+rename_block	psascan_src/inmem_psascan_src/initial_partial_sufsort.h	/^void rename_block(unsigned char *text, long text_length, long block_beg,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+rerename_block	psascan_src/inmem_psascan_src/initial_partial_sufsort.h	/^void rerename_block(unsigned char *block, long block_length) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+reset	psascan_src/bitvector.h	/^    inline void reset(long i) {$/;"	f	language:C++	struct:psascan_private::bitvector
+reset	psascan_src/inmem_psascan_src/merge_schedule.h	/^  void reset(int no_of_blocks, float right_left_ratio,$/;"	f	language:C++	class:psascan_private::inmem_psascan_private::MergeSchedule
+right_cost	psascan_src/inmem_psascan_src/merge_schedule.h	/^  std::vector<int> right_cost;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::MergeSchedule
+right_size	psascan_src/inmem_psascan_src/merge_schedule.h	/^  int right_size(int n) const {$/;"	f	language:C++	class:psascan_private::inmem_psascan_private::MergeSchedule
+rl_ratio	psascan_src/inmem_psascan_src/merge_schedule.h	/^  float rl_ratio;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::MergeSchedule
+run_divsufsort	psascan_src/inmem_psascan_src/divsufsort_template.h	/^void run_divsufsort(const unsigned char *, T*, T) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+run_divsufsort	psascan_src/inmem_psascan_src/divsufsort_template.h	/^void run_divsufsort(const unsigned char *text, int *sa, int length) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+run_divsufsort	psascan_src/inmem_psascan_src/divsufsort_template.h	/^void run_divsufsort(const unsigned char *text, long *sa, long length) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+sa	psascan_src/inmem_psascan_src/bwtsa.h	/^  sa_type sa;$/;"	m	language:C++	struct:psascan_private::inmem_psascan_private::bwtsa_t
+save	psascan_src/bitvector.h	/^    inline void save(std::string filename) const {$/;"	f	language:C++	struct:psascan_private::bitvector
+save_to_file	psascan_src/gap_array.h	/^  void save_to_file(std::string fname) {$/;"	f	language:C++	struct:psascan_private::buffered_gap_array
+sblock_beg	psascan_src/gap_buffer.h	/^  long *sblock_beg;$/;"	m	language:C++	struct:psascan_private::gap_buffer
+sblock_size	psascan_src/gap_buffer.h	/^  long *sblock_size;$/;"	m	language:C++	struct:psascan_private::gap_buffer
+select0	psascan_src/ranksel_support.h	/^  inline long select0(long i) const {$/;"	f	language:C++	struct:psascan_private::ranksel_support
+select1	psascan_src/ranksel_support.h	/^  inline long select1(long i) const {$/;"	f	language:C++	struct:psascan_private::ranksel_support
+send_active_buf_to_write	psascan_src/async_bit_stream_writer.h	/^  void send_active_buf_to_write() {$/;"	f	language:C++	struct:psascan_private::async_bit_stream_writer
+send_active_buf_to_write	psascan_src/async_stream_writer.h	/^  void send_active_buf_to_write() {$/;"	f	language:C++	struct:psascan_private::async_stream_writer
+set	psascan_src/bitvector.h	/^    inline void set(long i) {$/;"	f	language:C++	struct:psascan_private::bitvector
+set_count	psascan_src/gap_array.h	/^  void set_count(long pos, long value) {$/;"	f	language:C++	struct:psascan_private::gap_array_2n
+single_file_info	psascan_src/multifile.h	/^  single_file_info(long beg, long end, std::string filename) {$/;"	f	language:C++	struct:psascan_private::single_file_info
+single_file_info	psascan_src/multifile.h	/^struct single_file_info {$/;"	s	language:C++	namespace:psascan_private
+sparse_isa	psascan_src/inmem_psascan_src/sparse_isa.h	/^  sparse_isa(const pagearray_type *bwtsa, const unsigned char *text,$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::sparse_isa
+sparse_isa	psascan_src/inmem_psascan_src/sparse_isa.h	/^struct sparse_isa {$/;"	s	language:C++	namespace:psascan_private::inmem_psascan_private
+sparse_isa	psascan_src/sparse_isa.h	/^    sparse_isa(const saidx_t *psa, const unsigned char *text, long length,$/;"	f	language:C++	struct:psascan_private::sparse_isa
+sparse_isa	psascan_src/sparse_isa.h	/^struct sparse_isa {$/;"	s	language:C++	namespace:psascan_private
+split	psascan_src/inmem_psascan_src/merge_schedule.h	/^  std::vector<int> split;$/;"	m	language:C++	class:psascan_private::inmem_psascan_private::MergeSchedule
+start_sequential_access	psascan_src/gap_array.h	/^  void start_sequential_access() {$/;"	f	language:C++	struct:psascan_private::buffered_gap_array
+state_string	psascan_src/distributed_file.h	/^  std::string state_string() const {$/;"	f	language:C++	struct:psascan_private::distributed_file
+std	psascan_src/uint40.h	/^namespace std {$/;"	n	language:C++
+stdout_mutex	psascan_src/stream.h	/^std::mutex stdout_mutex;$/;"	m	language:C++	namespace:psascan_private
+stop	psascan_src/background_block_reader.h	/^    inline void stop() {$/;"	f	language:C++	struct:psascan_private::background_block_reader
+stop_sequential_access	psascan_src/gap_array.h	/^  void stop_sequential_access() {$/;"	f	language:C++	struct:psascan_private::buffered_gap_array
+stream_info	psascan_src/stream_info.h	/^  stream_info(long thread_count, long tostream)$/;"	f	language:C++	struct:psascan_private::stream_info
+stream_info	psascan_src/stream_info.h	/^struct stream_info {$/;"	s	language:C++	namespace:psascan_private
+task_solver_code	psascan_src/inmem_psascan_src/inmem_compute_initial_ranks.h	/^void task_solver_code(const unsigned char *text,$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+u64	psascan_src/uint40.h	/^    inline uint64_t u64() const$/;"	f	language:C++	class:uint40
+uint40	psascan_src/uint40.h	/^    inline uint40()$/;"	f	language:C++	class:uint40
+uint40	psascan_src/uint40.h	/^    inline uint40(const int& a)$/;"	f	language:C++	class:uint40
+uint40	psascan_src/uint40.h	/^    inline uint40(const long& a)$/;"	f	language:C++	class:uint40
+uint40	psascan_src/uint40.h	/^    inline uint40(const uint40& a)$/;"	f	language:C++	class:uint40
+uint40	psascan_src/uint40.h	/^    inline uint40(const uint64_t& a)$/;"	f	language:C++	class:uint40
+uint40	psascan_src/uint40.h	/^    inline uint40(const unsigned int& a)$/;"	f	language:C++	class:uint40
+uint40	psascan_src/uint40.h	/^    inline uint40(uint32_t l, uint8_t h)$/;"	f	language:C++	class:uint40
+uint40	psascan_src/uint40.h	/^class uint40$/;"	c	language:C++
+ull	psascan_src/uint40.h	/^    inline uint64_t ull() const {$/;"	f	language:C++	class:uint40
+update	psascan_src/inmem_psascan_src/inmem_update.h	/^  void update(const gap_buffer<block_offset_type> *buffer) {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::gap_parallel_updater
+update	psascan_src/update.h	/^  void update(gap_buffer<block_offset_type> *buffer) {$/;"	f	language:C++	struct:psascan_private::gap_parallel_updater
+update_ms	psascan_src/inmem_psascan_src/srank_aux.h	/^inline void update_ms(const unsigned char *text, T length, T &s, T &p) {$/;"	f	language:C++	namespace:psascan_private::inmem_psascan_private
+usage	main.cpp	/^void usage(int status) {$/;"	f	language:C++
+utils	psascan_src/utils.cpp	/^namespace utils {$/;"	n	language:C++	namespace:psascan_private	file:
+utils	psascan_src/utils.h	/^namespace utils {$/;"	n	language:C++	namespace:psascan_private
+value_type	psascan_src/inmem_psascan_src/pagearray.h	/^  typedef T value_type;$/;"	t	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+wait	psascan_src/background_block_reader.h	/^    inline void wait(long target_fetched) {$/;"	f	language:C++	struct:psascan_private::background_block_reader
+wait	psascan_src/background_chunk_reader.h	/^    inline void wait(long end) {$/;"	f	language:C++	struct:psascan_private::background_chunk_reader
+wclock	psascan_src/utils.cpp	/^long double wclock() {$/;"	f	language:C++	namespace:psascan_private::utils
+wclock	psascan_src/utils.h	/^long double wclock();$/;"	p	language:C++	namespace:psascan_private::utils
+write	psascan_src/async_bit_stream_writer.h	/^  inline void write(unsigned char bit) {$/;"	f	language:C++	struct:psascan_private::async_bit_stream_writer
+write	psascan_src/async_stream_writer.h	/^  inline void write(value_type x) {$/;"	f	language:C++	struct:psascan_private::async_stream_writer
+write	psascan_src/distributed_file.h	/^  void write(const value_type *begin, const value_type *end) {$/;"	f	language:C++	struct:psascan_private::distributed_file
+write_objects_to_file	psascan_src/utils.h	/^void write_objects_to_file(const value_type *tab, long length, std::string fname) {$/;"	f	language:C++	namespace:psascan_private::utils
+~approx_rank	psascan_src/approx_rank.h	/^    ~approx_rank() {$/;"	f	language:C++	class:psascan_private::approx_rank
+~async_backward_skip_stream_reader	psascan_src/async_backward_skip_stream_reader.h	/^  ~async_backward_skip_stream_reader() {$/;"	f	language:C++	struct:psascan_private::async_backward_skip_stream_reader
+~async_bit_stream_writer	psascan_src/async_bit_stream_writer.h	/^  ~async_bit_stream_writer() {$/;"	f	language:C++	struct:psascan_private::async_bit_stream_writer
+~async_multifile_bit_stream_reader	psascan_src/async_multifile_bit_stream_reader.h	/^  ~async_multifile_bit_stream_reader() {$/;"	f	language:C++	struct:psascan_private::async_multifile_bit_stream_reader
+~async_stream_writer	psascan_src/async_stream_writer.h	/^  ~async_stream_writer() {$/;"	f	language:C++	struct:psascan_private::async_stream_writer
+~async_vbyte_stream_reader	psascan_src/async_vbyte_stream_reader.h	/^  ~async_vbyte_stream_reader() {$/;"	f	language:C++	struct:psascan_private::async_vbyte_stream_reader
+~background_block_reader	psascan_src/background_block_reader.h	/^    ~background_block_reader() {$/;"	f	language:C++	struct:psascan_private::background_block_reader
+~background_chunk_reader	psascan_src/background_chunk_reader.h	/^    ~background_chunk_reader() {$/;"	f	language:C++	struct:psascan_private::background_chunk_reader
+~bitvector	psascan_src/bitvector.h	/^    ~bitvector() {$/;"	f	language:C++	struct:psascan_private::bitvector
+~buffered_gap_array	psascan_src/gap_array.h	/^  ~buffered_gap_array() {$/;"	f	language:C++	struct:psascan_private::buffered_gap_array
+~gap_array_2n	psascan_src/gap_array.h	/^  ~gap_array_2n() {$/;"	f	language:C++	struct:psascan_private::gap_array_2n
+~gap_buffer	psascan_src/gap_buffer.h	/^  ~gap_buffer() {$/;"	f	language:C++	struct:psascan_private::gap_buffer
+~gap_parallel_updater	psascan_src/inmem_psascan_src/inmem_update.h	/^  ~gap_parallel_updater() {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::gap_parallel_updater
+~gap_parallel_updater	psascan_src/update.h	/^  ~gap_parallel_updater() {$/;"	f	language:C++	struct:psascan_private::gap_parallel_updater
+~inmem_gap_array	psascan_src/inmem_psascan_src/inmem_gap_array.h	/^  ~inmem_gap_array() {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::inmem_gap_array
+~multifile	psascan_src/multifile.h	/^  ~multifile() {$/;"	f	language:C++	struct:psascan_private::multifile
+~multifile_bit_stream_reader	psascan_src/multifile_bit_stream_reader.h	/^  ~multifile_bit_stream_reader() {$/;"	f	language:C++	struct:psascan_private::multifile_bit_stream_reader
+~pagearray	psascan_src/inmem_psascan_src/pagearray.h	/^  ~pagearray() {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::pagearray
+~rank4n	psascan_src/inmem_psascan_src/rank.h	/^    ~rank4n() {$/;"	f	language:C++	class:psascan_private::inmem_psascan_private::rank4n
+~rank4n	psascan_src/rank.h	/^    ~rank4n() {$/;"	f	language:C++	class:psascan_private::rank4n
+~ranksel_support	psascan_src/ranksel_support.h	/^  ~ranksel_support() {$/;"	f	language:C++	struct:psascan_private::ranksel_support
+~sparse_isa	psascan_src/inmem_psascan_src/sparse_isa.h	/^  ~sparse_isa() {$/;"	f	language:C++	struct:psascan_private::inmem_psascan_private::sparse_isa
+~sparse_isa	psascan_src/sparse_isa.h	/^    ~sparse_isa() {$/;"	f	language:C++	struct:psascan_private::sparse_isa
+~stream_info	psascan_src/stream_info.h	/^  ~stream_info() {$/;"	f	language:C++	struct:psascan_private::stream_info

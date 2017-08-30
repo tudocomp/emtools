@@ -1,0 +1,207 @@
+LCPscan - external memory LCP array construction algorithm.
+===========================================================
+
+
+Description
+-----------
+
+This package contains implementation of the first external memory LCP
+array construction algorithm called LCPscan. The algorithm is described
+in the paper
+
+  Juha Karkkainen and Dominik Kempa,
+  LCP Array Construction in External Memory.
+  In Proc. 13th Symposium on Experimental Algorithms (SEA), 2014.
+
+The latest version of LCPscan is available at:
+  http://www.cs.helsinki.fi/group/pads/
+
+
+
+Compilation and usage
+---------------------
+
+1. Create a 'build' directory in the package source directory.
+
+   $ cd LCPscan-?.?.?
+   $ mkdir build
+   $ cd build
+
+2. Configure the package for your system.
+
+   $ cmake -DCMAKE_BUILD_TYPE="Release" ..
+
+3. Compile the package.
+
+   $ make
+
+This will produce the executable 'construct_lcp' that allows computing the
+LCP array of a given file. LCPscan relies on the prior computation of suffix
+array for the input text. The suffix array should be stored in a file using
+40-bit integers. The suffix array in this format can be computed e.g. using
+the pSAscan algorithm, see https://www.cs.helsinki.fi/group/pads/pSAscan.html
+for more details.
+
+Detailed explanation for the typical use case is described below. Run the
+'construct_lcp' with --help flag for additional options.
+
+Example
+~~~~~~~
+
+1. Basic external memory routines (such as sorting) are implemented in
+LCPscan using the STXXL library (see: http://stxxl.sourceforge.net/)
+thus the first step is creating the STXXL configuration file. It is used
+by STXXL to determine where to store data generated during the computation
+(e.g., runs created during external memory sorting). The file should be
+called ".stxxl". LCPscan will first attempt to find this file in the
+directory containing the executable (which at this point is build/) and
+if not found it attempts to use "$HOME/.stxxl".
+
+Each line of the configuration file specifies one temporary file: its
+location, maximum size in MiB, and access method. For example, for two
+200GB temporary files named 'tmp' and located in /data01 and /data02,
+the content of .stxxl could be:
+
+disk=/data01/tmp,200000,syscall_unlink
+disk=/data02/tmp,200000,syscall_unlink
+
+The method "syscall_unlink" creates a file on the disk, which does not
+appear in directory and is automatically freed by the kernel when the
+program ends.
+
+Note: the default STXXL strategy of allocating space in temporary files
+  is striping, which limits the size of each of the temporary files to
+  the size of the smallest of all files! This should be taken into account
+  when preparing a config file for a system with storage unevenly
+  distributed among partitions. Namely, large files should be split into
+  smaller files, so that all temporary files are roughly of equal size.
+
+With default settings, LCPscan requires that the total usable temporary
+space is at least 6n bytes, where n is the size of the input text in bytes.
+NOTE: the space specified in the above config file does not include the
+output LCP array. The output needs additional 5n bytes and by default is
+written in the directory containing the input text.
+
+See the section 'Disk usage' of this file for more information and
+additional options.
+
+2. To compute the LCP array of file in.txt located in /data01/ and assuming
+that the suffix array of in.txt is stored in the same directory as the
+text and has the .sa5 extension (in this example: /data01/in.txt.sa5) run
+LCPscan as (assuming the current directory is build/):
+
+   $ ./construct_lcp /data01/in.txt
+
+By default LCPscan uses 3.5GiB of RAM for the computation. In most cases,
+however, using more RAM will improve the performance of the algorithm. The
+exact RAM usage can be specified with the -m flag. For example, to use 8GiB
+run LCPscan as:
+
+   $ ./construct_lcp /data01/in.txt -m 8192
+
+By default, the resulting LCP array is written to a file matching the
+filename of the input text with the .lcp5 extension (in this example:
+/data01/in.txt.lcp5). To write the LCP array to a different file, use
+the -o flag, e.g.,
+
+   $ ./construct_lcp /data01/in.txt -m 8192 -o /data02/in.txt.lcp5
+
+To explicitly specify the name and location of file with the suffix array,
+use the -s flag, e.g.,
+
+   $ ./construct_lcp /data01/in.txt -m 8192 -s /data02/in.txt.sa5
+
+LCPscan encodes the output LCP array using unsigned 40-bit integers.
+For further processing of the LCP array, one should use the same or
+compatible encoding. The class implementing unsigned 40-bit integers
+is located in the src/lcpscan_src/uint40.h file.
+
+To display the list of flags with short description, run the construct_lcp
+program without any arguments or with the --help flag.
+
+
+
+Disk usage
+----------
+
+1. For practical applications (as described in the 'Compilation and usage'
+section of this file), where the output LCP array needs to be written to
+disk as a proper file, LCPscan requires 6n bytes of disk space in addition
+to the input and output (occupying 11n bytes in total).
+
+However, LCPscan finishes the computation with the LCP array stored in the
+temporary files specified in the STXXL config file and up to this point
+the total peak disk space usage (including the input of size 6n bytes) is
+only 12n bytes. Only then, as the last step, LCPscan copies the LCP array
+from the temporary files into a single file (which increases the peak disk
+space usage to 17n bytes). In some applications it may be desirable to disable
+this last step to reduce the peak disk space usage, e.g., when running
+LCPscan only to measure the computation time. This can be accomplished
+with the --test flag, e.g.:
+
+   $ ./construct_lcp /data01/in.txt -m 8192 --test
+
+2. During its operation, LCPscan scans the input text and the suffix array
+multiple times. Thus, it may notably harm the performance, if either of the
+two files (in particular the text) is located on a very slow disk. To solve
+this issue, LCPscan implements the --distribute flag. It tells the program
+to copy the input text or the suffix array (or both) into the STXXL temporary
+space prior to LCP array computation. This may speed up the access to the
+file being distributed, if the STXXL temporary space is allocated on several
+physical disks. For example, to only distribute the input text, run LCPscan as:
+
+   $ ./construct_lcp /data01/in.txt -m 8192 --distribute=text
+
+Alternative arguments for --distribute are: `sa' (only distributes the
+suffix array) or `all' (distributes both the text and the suffix array).
+Note that enabling the --distribute flag will increase the peak disk
+space usage of LCPscan by the size of the distributed data (e.g., n bytes
+in the above example).
+
+3. LCPscan allows access to the input text and suffix array in a non-caching
+mode, i.e., every time the program accesses any of the files, it first makes
+sure that no part of the file is in the page cache. Enabling this mode is
+achieved by adding the --nocache flag. This flag is mostly useful for
+performance measurements and in most practical situations using this flag
+is not recommended.
+
+
+
+Limitations
+-----------
+
+1. The maximum size of input text is currently 1TiB (2^40 bytes). It can be
+   easily extended beyond that by replacing the 40-bit integers with wider
+   type and making appropriate modifications in the code.
+2. This implementation currently only supports inputs over byte alphabet.
+   However, the algorithm can be easily modified to handle larger (or even
+   general) alphabet, see the original paper cited above for more details.
+
+
+
+Third-party code
+----------------
+
+The LCPscan implementation makes use of some third-party code, in particular:
+  - basic external memory routines (such as sorting) are implemented using
+    the STXXL library (http://stxxl.sourceforge.net/)
+  - the implementation of radixsort is based on the string sorting code
+    of Tommi Rantala (https://github.com/rantala/string-sorting)
+  - the uint40 class was copied (and slightly modified) from the eSAIS-0.5.2
+    algorithm (https://panthema.net/2012/1119-eSAIS-Inducing-Suffix-and-
+    LCP-Arrays-in-External-Memory/)
+
+
+
+Terms of use
+------------
+
+LCPscan is released under the MIT/X11 license. See the file LICENCE for
+more details.
+
+If you use this code, please cite the paper mentioned above and publish
+the URL from which you downloaded the code.
+
+
+
+Helsinki, Jan 2016.

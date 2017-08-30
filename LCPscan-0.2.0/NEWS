@@ -1,0 +1,10 @@
+Changes in release 0.2.0
+
+  - Added --distribute, --nocache and --test command line options
+  - Optimized the runtime and space usage of radixsort
+  - More careful allocation of RAM for the STXXL sorting/merging routines (which
+    reduces the risk of having to perform additional rounds of EM sorting)
+  - Modified the merging of LCP subsequences to almost in-place (within STXXL)
+  - Added collecting and displaying more statistics about LCP values
+  - Changed the default number of superblocks from 4 to 10
+  - Expanded README
