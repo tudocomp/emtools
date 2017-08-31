@@ -1,0 +1,6 @@
+src/construct_lcp_from_plcp_parallel
+src/construct_lcp_from_plcp_sequential
+src/construct_lcp_parallel
+src/construct_lcp_sequential
+src/construct_plcp_parallel
+src/construct_plcp_sequential
