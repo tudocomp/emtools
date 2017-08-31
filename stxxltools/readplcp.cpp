@@ -17,7 +17,6 @@
 #include <stxxl/random>
 #include <stxxl/sort>
 #include <stxxl/bits/algo/ksort.h>
-#include "/scripts/code/dcheck.hpp"
 
 #include <iostream>
 #include <fstream>
@@ -63,7 +62,7 @@ class PLCPFileForwardIterator {
 
 	len_t index() const { return m_idx; }
 	bool has_next() const {
-		return m_is;
+		return m_is.good();
 	}
 
 	len_t next_select() {
