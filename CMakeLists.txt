@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
 project (emtools)
 
+include(ExternalProject)
+
 # C++11
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11")
 
@@ -18,5 +20,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${OpenMP_EXE_LINKER_FLAGS}")
 
 # subdirectories
-add_subdirectory(LCPscan-0.2.0)
+add_subdirectory(pSAscan-0.1.0)                # SA
+add_subdirectory(EM-SuccinctIrreducible-0.1.0) # PLCP
+add_subdirectory(LCPscan-0.2.0)                # LCP
 
