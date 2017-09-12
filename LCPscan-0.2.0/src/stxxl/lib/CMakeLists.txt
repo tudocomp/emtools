@@ -48,6 +48,6 @@ if (NOT MSVC)
 
 endif (NOT MSVC)
 
-add_library(stxxl ${LIBSTXXL_SOURCES})
+add_library(stxxl-lcpscan ${LIBSTXXL_SOURCES})
 
-set_target_properties(stxxl PROPERTIES VERSION 1.3.2)
+set_target_properties(stxxl-lcpscan PROPERTIES VERSION 1.3.2)

@@ -1,6 +1,6 @@
 # Base CMake file for STXXL
 
-project(stxxl)
+project(stxxl-lcpscan)
 
 cmake_minimum_required(VERSION 2.8)
 
@@ -159,7 +159,7 @@ configure_file(${PROJECT_SOURCE_DIR}/include/stxxl/bits/config.h.in ${PROJECT_BI
 include_directories( "${PROJECT_SOURCE_DIR}/include" "${PROJECT_BINARY_DIR}/include" )
 
 # for targets using stxxl library
-set(STXXL_LIBS ${STXXL_LIBS} stxxl ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
+set(STXXL_LIBS ${STXXL_LIBS} stxxl-lcpscan ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
 
 # build libstxxl in /lib
 add_subdirectory(lib)

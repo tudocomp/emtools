@@ -1,1 +1,1 @@
-include_directories("${PROJECT_SOURCE_DIR}/src/stxxl/include")
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/../stxxl/include")
