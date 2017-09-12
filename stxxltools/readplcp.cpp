@@ -21,8 +21,8 @@
 #include <iostream>
 #include <fstream>
 #include <stxxl/bits/common/uint_types.h>
-//#include "/home/niki/opt/include/sdsl/bits.hpp"
-#include <sdsl/bits.hpp>
+
+#include "sdsl/bits.hpp"
 
 size_t filesize( const char*const filepath ){
 	std::ifstream file(filepath, std::ios::binary | std::ios::ate | std::ios::in);
