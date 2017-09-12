@@ -14,3 +14,5 @@ target_include_directories(construct_lcp PUBLIC
     "${CMAKE_CURRENT_BINARY_DIR}/src/stxxl/include")
 target_link_libraries(construct_lcp stxxl-lcpscan)
 
+set(CONSTRUCT_LCP_BIN ${CMAKE_CURRENT_BINARY_DIR}/construct_lcp PARENT_SCOPE)
+

@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# CMake configured paths
+STANDARDIZE_BIN=@STANDARDIZE_BIN@
+UNSTANDARDIZE_BIN=@UNSTANDARDIZE_BIN@
+ISAANDBWT_BIN=@ISAANDBWT_BIN@
+READPLCP_BIN=@READPLCP_BIN@
+PSASCAN_BIN=@PSASCAN_BIN@
+CONSTRUCT_PLCP_SEQ_BIN=@CONSTRUCT_PLCP_SEQ_BIN@
+CONSTRUCT_LCP_BIN=@CONSTRUCT_LCP_BIN@
+
+PLCP_BIN=@PLCP_BIN@
+TDC_BIN=@TDC_BIN@
+
+# The script
+scriptpath=`dirname $(readlink -f "$0")` && cd "$scriptpath"
+input=$1
+if [[ ! -r "${input}" ]]; then
+	echo "File ${input} not readable"
+	exit 1
+fi
+
+# escapes symbols that cannot be treated by pSAscan
+if [[ ! -r "${input}.0" ]]; then
+	echo standardize "${input}"
+	time "${STANDARDIZE_BIN}" "${input}"
+fi
+# generates SA from text
+if [[ ! -r "${input}.0.sa5" ]]; then
+	echo psascan "${input}.0"
+	time "${PSASCAN_BIN}" "${input}.0"
+fi
+# generates BWT and ISA
+if [[ ! -r "${input}.0.isa5" ]]; then
+	echo isaandbwt "${input}.0"
+	time "${ISAANDBWT_BIN}" "${input}.0"
+fi
+# generates PLCP from BWT and SA
+if [[ ! -r "${input}.0.plcp" ]]; then
+	echo construct_plcp_sequential "${input}.0"
+	time "${CONSTRUCT_PLCP_SEQ_BIN}" "${input}.0"
+fi
+# generates LCP from text and SA
+if [[ ! -r "${input}.0.lcp5" ]]; then
+	echo construct_lcp "${input}.0"
+	time "${CONSTRUCT_LCP_BIN}" "${input}.0"
+fi
+
+#runs plcp, has to be generated with 'make plcp' in tudocomp
+echo "plcp ${input}.0 ${input}.0.tdc"
+"${PLCP_BIN}" "${input}.0" "${input}.0.tdc"
+
+#decompress plcp-compressed file
+TDC_DECODE_ALGORITHM="lcpcomp(coder=huff)"
+echo "tdc -a '${TDC_DECODE_ALGORITHM}' -d --raw ${input}.0.tdc -f -o ${input}.0.orig"
+"${TDC_BIN}" -a "${TDC_DECODE_ALGORITHM}" -d --raw "${input}.0.tdc" -f -o "${input}.0.orig"
+
+# un-escape decompressed file
+echo "${UNSTANDARDIZE_BIN} ${input}.0.orig"
+"${UNSTANDARDIZE_BIN}" "${input}.0.orig"
+
+# compare decompressed file with original file
+echo "diff ${input} ${input}.0.orig.1"
+diff "${input}" "${input}.0.orig.1"
+[[ $? -eq 0 ]] && echo 'PERFECT'
+

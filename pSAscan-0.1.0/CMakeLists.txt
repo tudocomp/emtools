@@ -8,3 +8,5 @@ ExternalProject_Add(
     BUILD_IN_SOURCE 1
 )
 
+set(PSASCAN_BIN ${CMAKE_CURRENT_SOURCE_DIR}/src/psascan PARENT_SCOPE)
+

@@ -8,3 +8,7 @@ ExternalProject_Add(
     BUILD_IN_SOURCE 1
 )
 
+set(CONSTRUCT_PLCP_SEQ_BIN
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/construct_plcp_sequential
+    PARENT_SCOPE)
+
