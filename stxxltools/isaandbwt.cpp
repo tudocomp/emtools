@@ -84,6 +84,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
+    constexpr size_t log_gran = (1llu << 29);
 
     auto& stats = *stxxl::stats::get_instance();
     stxxl::stats_data stats_begin(stats);
@@ -99,6 +100,9 @@ int main(int argc, char* argv[]) {
 
         IntVector::bufreader_type reader(savector);
         for(stxxl::unsigned_type index = 0; !reader.empty(); ++reader, ++index) {
+            if (index % log_gran == 0) {
+                std::cout << "Read SA: " << index << " of " << savector.size() << " (" << (100. * index / savector.size()) << "%)" << std::endl;
+            }
             isa_sorter.push( std::make_pair(*reader, index) );
         }
 
@@ -127,7 +131,14 @@ int main(int argc, char* argv[]) {
         isa_writer << isa_zero;
 
 
-        for(++isa_sorter; !isa_sorter.empty(); ++isa_sorter, ++text_reader) {
+        size_t index = 0;
+        size_t isa_size = isa_sorter.size();
+        for(++isa_sorter; !isa_sorter.empty(); ++isa_sorter, ++text_reader, ++index) {
+            if (index % log_gran == 0) {
+                std::cout << "Read IsaSort: " << index << " of " << isa_size << " (" << (100. * index / isa_size) << "%)" << std::endl;
+            }
+
+
             // write isa output file
             isa_writer << isa_sorter->second;
 
@@ -151,8 +162,14 @@ int main(int argc, char* argv[]) {
 
         bwt_sorter.sort();
 
-        for(; !bwt_sorter.empty(); ++bwt_sorter)
+        size_t index = 0;
+        size_t bwt_size = bwt_sorter.size();
+        for(; !bwt_sorter.empty(); ++bwt_sorter) {
+            if (index % log_gran == 0) {
+                std::cout << "Read bwt_sorter: " << index << " of " << bwt_size << " (" << (100. * index / bwt_size) << "%)" << std::endl;
+            }
             bwt_writer << bwt_sorter->second;
+        }
 
         bwt_writer.finish();
     }
