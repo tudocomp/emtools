@@ -34,7 +34,7 @@ using FileInt = stxxl::uint40;
 using IntPair = std::pair<FileInt, FileInt>;
 using IntCharPair = std::pair<FileInt, char>;
 
-using IntVector = typename stxxl::VECTOR_GENERATOR<FileInt, 4, 8, sizeof(FileInt)*4096>::result;
+using IntVector = typename stxxl::VECTOR_GENERATOR<FileInt, 4, 8, sizeof(FileInt)<<19>::result;
 using CharVector = typename stxxl::VECTOR_GENERATOR<char>::result;
 
 
