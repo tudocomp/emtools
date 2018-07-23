@@ -1,23 +1,10 @@
-/***************************************************************************
- *  test1.cpp
- *
- *  Part of a simple STXXL example. See http://stxxl.sourceforge.net
- *
- *  Copyright (C) 2013 Timo Bingmann <tb@panthema.net>
- *
- *  Distributed under the Boost Software License, Version 1.0.
- *  (See accompanying file LICENSE_1_0.txt or copy at
- *  http://www.boost.org/LICENSE_1_0.txt)
- **************************************************************************/
-
 #include <iostream>
 #include <limits>
 
 #include <stxxl/vector>
-#include <stxxl/random>
-#include <stxxl/sort>
-#include <stxxl/bits/algo/ksort.h>
-//#include "/scripts/code/dcheck.hpp"
+#include <stxxl/sorter>
+#include <stxxl/bits/common/uint_types.h>
+#include <stxxl/io>
 
 #include <string>
 #include <sstream>
@@ -35,208 +22,160 @@
 #define DCHECK_GT(x, y) DCHECK_((x) > (y) ,x,y)
 #endif //DCHECK
 
+// Select IO System to be used to read/write input/output
+// LinuxAIO is fasted but -suprise- only available on Linux machines
+using FileDriver = stxxl::linuxaio_file;
+constexpr auto FileModeRead = stxxl::file::RDONLY | stxxl::file::DIRECT | stxxl::file::NO_LOCK;
+constexpr auto FileModeWrite = stxxl::file::DIRECT | stxxl::file::RDWR | stxxl::file::CREAT | stxxl::file::TRUNC;
 
 
+// Configure Integer type used for read/writing input/output
+using FileInt = stxxl::uint40;
+using IntPair = std::pair<FileInt, FileInt>;
+using IntCharPair = std::pair<FileInt, char>;
+
+using IntVector = typename stxxl::VECTOR_GENERATOR<FileInt, 4, 8, sizeof(FileInt)<<19>::result;
+using CharVector = typename stxxl::VECTOR_GENERATOR<char>::result;
 
 
-// struct my_less_int : std::less<int>
-// {
-//     int min_value() const { return std::numeric_limits<int>::min(); };
-//     int max_value() const { return std::numeric_limits<int>::max(); };
-// };
-//
-// int main(int argv,)
-// {
-//     // create vector
-//     stxxl::VECTOR_GENERATOR<int>::result vector;
-//
-//     // fill vector with random integers
-//     stxxl::random_number32 random;
-//
-//     for (size_t i = 0; i < 100*1024*1024; ++i) {
-//         vector.push_back(random());
-//     }
-//
-//     // sort vector using 16 MiB RAM
-//     stxxl::sort(vector.begin(), vector.end(), my_less_int(), 16*1024*1024);
-//
-//     // output first and last items:
-//     std::cout << vector.size() << " items sorted ranging from "
-//               << vector.front() << " to " << vector.back() << std::endl;
-//
-//     return 0;
-// }
-
-
-
-#include <iostream>
-#include <fstream>
-#include <stxxl/bits/common/uint_types.h>
-
-size_t filesize( const char*const filepath ){
-	std::ifstream file(filepath, std::ios::binary | std::ios::ate | std::ios::in);
-	if(!file.good()) return 0;
-	return file.tellg();
-}
-bool file_exists(const char *const filepath) {
-	std::ifstream infile(filepath);
-		return infile.good();
+static bool file_exists(const char *const filepath) {
+    std::ifstream infile(filepath);
+    return infile.good();
 }
 
+template<typename pair_t, bool OnlyFirst = false>
+struct PairCompare {
+    using first_type = typename pair_t::first_type;
+    using second_type = typename pair_t::second_type;
 
-template<class int_t>
-class IntegerFileForwardIterator {
-	const size_t m_size;
-	std::ifstream m_is;
-	size_t m_index;
-	char m_buf[sizeof(int_t)];
-	public:
+    bool operator() (const pair_t& a, const pair_t& b) const {
+        return OnlyFirst ? (a.first < b.first) : (a < b);
+    }
 
-	IntegerFileForwardIterator(const char*const filename) 
-	: m_size { filesize(filename) }
-	, m_is {filename, std::ios::binary | std::ios::in }
-	, m_index {0}
-	{}
+    pair_t min_value() const {
+      return {std::numeric_limits<first_type >::min(),
+              std::numeric_limits<second_type>::min()};
+    }
 
-	size_t size() const { return m_size/sizeof(int_t); }
-	size_t index() const { return m_index; }
-	int_t operator*() { return *reinterpret_cast<int_t*>(m_buf); }
-	IntegerFileForwardIterator& operator++(int) { 
-		m_is.read(m_buf, sizeof(int_t));
-		++m_index;
-		return *this;
-	}
+    pair_t max_value() const {
+      return {std::numeric_limits<first_type >::max(),
+            std::numeric_limits<second_type>::max()};
+    }
 };
 
-template<class int_t>
-class IntegerFileArray {
-	const size_t m_size;
-	std::ifstream m_is;
-	public:
-	IntegerFileArray(const char*const filename) 
-	: m_size { filesize(filename) }
-	, m_is {filename, std::ios::binary | std::ios::in }
-	{}
-	int_t operator[](size_t i) {
-//		DCHECK_LT(i, size());
-		m_is.seekg(i*sizeof(int_t), std::ios_base::beg);
-		char buf[sizeof(int_t)];
-		m_is.read(buf, sizeof(int_t));
-		return *reinterpret_cast<int_t*>(buf);
-	}
-	size_t size() const { return m_size/sizeof(int_t); }
-};
+int main(int argc, char* argv[]) {
+    const size_t sorter_mem = 512llu << 20;
+
+    if(argc != 2) {
+        std::cout << "Usage: " << argv[0] << " text-file" << std::endl;
+        return 1;
+    }
+    const std::string textfilename = argv[1];
+    const std::string safilename = textfilename  + ".sa5";
+    const std::string isafilename = textfilename  + ".isa5";
+    const std::string bwtfilename = textfilename  + ".bwt";
+
+    if(!file_exists(textfilename.c_str())) {
+        std::cout << "Could not open text file " << textfilename << std::endl;
+        return 1;
+    }
+    if(!file_exists(safilename.c_str())) {
+        std::cout << "Could not open SA file " << safilename << std::endl;
+        return 1;
+    }
+
+    constexpr size_t log_gran = (1llu << 29);
+
+    auto& stats = *stxxl::stats::get_instance();
+    stxxl::stats_data stats_begin(stats);
+
+    // Compute ISA
+    stxxl::sorter<IntPair, PairCompare<IntPair, true> > isa_sorter(
+      PairCompare<IntPair, true>(), sorter_mem);
+
+    {
+        // Open SA File for input
+        FileDriver safile(safilename, FileModeRead);
+        IntVector savector(&safile);
+
+        IntVector::bufreader_type reader(savector);
+        for(stxxl::unsigned_type index = 0; !reader.empty(); ++reader, ++index) {
+            if (index % log_gran == 0) {
+                std::cout << "Read SA: " << index << " of " << savector.size() << " (" << (100. * index / savector.size()) << "%)" << std::endl;
+            }
+            isa_sorter.push( std::make_pair(*reader, index) );
+        }
+
+        isa_sorter.sort();
+    }
 
 
-using namespace stxxl;
-void bwt() {
-	IntegerFileForwardIterator<uint40> sa   { "/bighome/workspace/eSAIS/build/src/a.sa5" };
-	std::ifstream is("/bighome/workspace/eSAIS/build/src/a", std::ios::binary | std::ios::in);
-	while(is) {
+    // Write ISA file and fill BWT file
+    stxxl::sorter<IntCharPair, PairCompare<IntCharPair, true> >
+        bwt_sorter(PairCompare<IntCharPair, true>(), sorter_mem);
+    {
+        // open isa output file
+        FileDriver isa_file(isafilename, FileModeWrite);
+        IntVector isa_vector(&isa_file);
+        isa_vector.resize(isa_sorter.size());
+        typename IntVector::bufwriter_type isa_writer(isa_vector);
 
-	}
-	
-}
+        // open text file for reading
+        FileDriver text_file(textfilename, FileModeRead);
+        CharVector text_vector(&text_file);
+        typename CharVector::bufreader_type text_reader(text_vector);
+        DCHECK_EQ(text_vector.size(), isa_sorter.size());
 
-		// struct KeyExtractor {
-		// 	typedef uint40 key_type;
-		// 	typedef std::pair<uint40,uint40> value_type;
-		// 	key_type m_key;
-        //
-		// 	KeyExtractor() {}
-		// 	KeyExtractor(const key_type& k) : m_key(k) {}
-		// 	key_type operator()(const value_type& v) const { return v.first; }
-		// 	value_type min_value() const { return value_type(0,0); }
-		// 	//value_type max_value() const { return std::make_pair(std::numeric_limits<key_type>::max(),0); }
-		// 	value_type max_value() const { return value_type(m_key,0); }
-		// };
-
-template<class pair_t>
-		struct KeyExtractor {
-			typedef pair_t value_type;
-			typedef typename pair_t::first_type key_type;
-			key_type m_key;
-
-			KeyExtractor() {}
-			KeyExtractor(const key_type& k) : m_key(k) {}
-			key_type operator()(const value_type& v) const { return v.first; }
-			value_type min_value() const { return pair_t(0, (typename value_type::second_type)0); }
-			//value_type max_value() const { return std::make_pair(std::numeric_limits<key_type>::max(),0); }
-			value_type max_value() const { return pair_t(m_key, (typename value_type::second_type)0); }
-		};
-		
-using namespace std;
-int main(int argc, char** argv) {
-	if(argc != 2) {
-		cout << "Usage: " << argv[0] << " text-file" << std::endl;
-		return 1;
-	}
-	const std::string textfilename = argv[1];
-	const std::string safilename = textfilename  + ".sa5";
-	const std::string isafilename = textfilename  + ".isa5";
-	const std::string bwtfilename = textfilename  + ".bwt";
-	if(!file_exists(textfilename.c_str())) {
-		cout << "Could not open text file " << textfilename << std::endl;
-		return 1;
-	}
-	if(!file_exists(safilename.c_str())) {
-		cout << "Could not open SA file " << safilename << std::endl;
-		return 1;
-	}
-    stxxl::VECTOR_GENERATOR<std::pair<uint40,uint40>>::result isa; // (text_position, factor_length)
-	IntegerFileForwardIterator<uint40> safile { safilename.c_str() };
-	while(safile.index() < safile.size()) {
-		uint40 index = static_cast<uint64>(safile.index());
-		isa.push_back(std::make_pair(*safile++,index));
-	}
-	stxxl::ksort(isa.begin(), isa.end(), KeyExtractor<std::pair<uint40,uint40>>(isa.size()),512*1024*1024); //, STXXL_DEFAULT_ALLOC_STRATEGY());
-	std::ofstream isa_out(isafilename, std::ios::binary);
-	for(auto it = isa.begin(); it != isa.end(); ++it) {
-		isa_out.write((char*)(&it->second), sizeof(uint40));
-	}
-	isa_out.close();
-	
-    stxxl::VECTOR_GENERATOR<std::pair<uint40,char>>::result bwt; 
-	ifstream textfile(textfilename, ios::in | ios::binary);
-	const uint40 isa_zero = isa.begin()->second;
-	{
-		auto it = isa.begin();
-		++it;
-		for(; it != isa.end(); ++it) {
-			bwt.push_back(std::make_pair(it->second+1, textfile.get()));
-		DCHECK(textfile.good());
-		}
-		DCHECK(textfile.good());
-		bwt.push_back(std::make_pair(isa_zero,textfile.get()));
-		DCHECK(textfile.good());
-	}
-	stxxl::ksort(bwt.begin(), bwt.end(), KeyExtractor<std::pair<uint40,char>>(isa.size()),512*1024*1024); //, STXXL_DEFAULT_ALLOC_STRATEGY());
-	std::ofstream bwt_out(bwtfilename, std::ios::binary);
-	for(auto it = bwt.begin(); it != bwt.end(); ++it) {
-		// if(it->second == 0) bwt_out.put(1); // TODO BUG: prevent writing the 0-byte by writing 1
-		bwt_out.put(it->second);
-	}
+        // the first entry in isa needs special treatment ...
+        const auto isa_zero = isa_sorter->second;
+        isa_writer << isa_zero;
 
 
-    // stxxl::VECTOR_GENERATOR<std::pair<uint40,uint40>>::result bwt; // (text_position, factor_length)
-	// ifstream textfile(textfilename, ios::in | ios::binary);
-	
-	//
-	// {
-	// 	IntegerFileForwardIterator<uint40> sa   { "/bighome/workspace/eSAIS/build/src/a.sa5" };
-	// 	IntegerFileForwardIterator<uint40> isa  { "/bighome/workspace/eSAIS/build/src/a.isa5" };
-	// 	IntegerFileForwardIterator<uint40> plcp { "/bighome/workspace/eSAIS/build/src/a.plcp5" };
-	// 	while(sa.index() < sa.size()) {
-	// 		std::cout << *sa++ << "," << *isa++ << "," << *plcp++ << endl; 
-	// 	}
-	// }
-	// std::cout << endl;
-	// {
-	// 	IntegerFileArray<uint40> sa   { "/bighome/workspace/eSAIS/build/src/a.sa5" };
-	// 	IntegerFileArray<uint40> isa  { "/bighome/workspace/eSAIS/build/src/a.isa5" };
-	// 	IntegerFileArray<uint40> plcp { "/bighome/workspace/eSAIS/build/src/a.plcp5" };
-	// 	for(size_t i = 0; i < sa.size(); ++i) {
-	// 		std::cout << sa[i] << "," << isa[i] << "," << plcp[i] << endl; 
-	// 	}
-	// }
+        size_t index = 0;
+        size_t isa_size = isa_sorter.size();
+        for(++isa_sorter; !isa_sorter.empty(); ++isa_sorter, ++text_reader, ++index) {
+            if (index % log_gran == 0) {
+                std::cout << "Read IsaSort: " << index << " of " << isa_size << " (" << (100. * index / isa_size) << "%)" << std::endl;
+            }
+
+
+            // write isa output file
+            isa_writer << isa_sorter->second;
+
+            // fill sorter for next stage
+            bwt_sorter.push(IntCharPair{isa_sorter->second, *text_reader});
+        }
+
+        bwt_sorter.push(IntCharPair{isa_zero, *text_reader});
+
+        isa_sorter.finish_clear();
+        isa_writer.finish();
+    }
+
+    // Sort and write out BWT
+    {
+        // open bwt output file
+        FileDriver bwt_file(bwtfilename, FileModeWrite);
+        CharVector bwt_vector(&bwt_file);
+        bwt_vector.resize(bwt_sorter.size());
+        typename CharVector::bufwriter_type bwt_writer(bwt_vector);
+
+        bwt_sorter.sort();
+
+        size_t index = 0;
+        size_t bwt_size = bwt_sorter.size();
+        for(; !bwt_sorter.empty(); ++bwt_sorter) {
+            if (index % log_gran == 0) {
+                std::cout << "Read bwt_sorter: " << index << " of " << bwt_size << " (" << (100. * index / bwt_size) << "%)" << std::endl;
+            }
+            bwt_writer << bwt_sorter->second;
+        }
+
+        bwt_writer.finish();
+    }
+
+    stxxl::stats_data stats_end(stats);
+    std::cout << (stats_end - stats_begin) << std::endl;
+
+    return 0;
 }
